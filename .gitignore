@@ -1,0 +1,60 @@
+# Python
+venv/
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+.pytest_cache/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Generic Voice specific
+output/*
+!output/.gitkeep
+*.wav
+*.mp3
+*.onnx
+*.onnx.json
+# ZIP archives - all excluded by default
+*.zip
+*.zip.*
+
+# EXCEPTION: Core 5 voices archives (included in GitHub repo)
+!lib/tts/piper/voices/fr_FR-siwis-medium.zip.*
+!lib/tts/piper/voices/en_US-amy-medium.zip.*
+!lib/tts/piper/voices/de_DE-mls-medium.zip.*
+!lib/tts/piper/voices/es_ES-sharvard-medium.zip.*
+!lib/tts/piper/voices/it_IT-paola-medium.zip.*
+
+# Voice models (large files)
+lib/tts/piper/voices/*.onnx
+lib/tts/piper/voices/*.onnx.json
+# Internal scripts (DO NOT PUBLISH)
+py/gv/
+
+# Archives
+*.tar.gz
+*.tar.bz2
+*.rar
+*.7z
+
+# Keep empty directories if needed
+!.gitkeep

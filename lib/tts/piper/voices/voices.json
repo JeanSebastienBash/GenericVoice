@@ -1,0 +1,1114 @@
+{
+  "voices": {
+    "nl_BE-rdh-medium": {
+      "language": "nl_BE",
+      "name": "Dutch",
+      "model_file": "nl_BE-rdh-medium.onnx",
+      "language_name": "Dutch (Belgium)"
+    },
+    "en_GB-jenny_dioco-medium": {
+      "language": "en_GB",
+      "name": "English",
+      "model_file": "en_GB-jenny_dioco-medium.onnx",
+      "language_name": "English (UK)"
+    },
+    "en_GB-vctk-medium": {
+      "language": "en_GB",
+      "name": "English",
+      "model_file": "en_GB-vctk-medium.onnx",
+      "language_name": "English (UK)"
+    },
+    "da_DK-talesyntese-medium": {
+      "language": "da_DK",
+      "name": "Danish",
+      "model_file": "da_DK-talesyntese-medium.onnx",
+      "language_name": "Danish"
+    },
+    "dii_it-IT": {
+      "language": "it",
+      "name": "dii_it-IT",
+      "model_file": "dii_it-IT.onnx",
+      "language_name": "Italian"
+    },
+    "en_US-john-medium": {
+      "language": "en_US",
+      "name": "English",
+      "model_file": "en_US-john-medium.onnx",
+      "language_name": "English (US)"
+    },
+    "te_IN-maya-medium": {
+      "language": "te_IN",
+      "name": "Telugu",
+      "model_file": "te_IN-maya-medium.onnx",
+      "language_name": "Telugu"
+    },
+    "en_US-libritts-high": {
+      "language": "en_US",
+      "name": "English",
+      "model_file": "en_US-libritts-high.onnx",
+      "language_name": "English (US)"
+    },
+    "miro_en-US": {
+      "language": "en-us",
+      "name": "miro_en-US",
+      "model_file": "miro_en-US.onnx",
+      "language_name": "English"
+    },
+    "fr_FR-glados_fr-medium": {
+      "language": "fr",
+      "name": "fr_FR-glados_fr-medium",
+      "model_file": "fr_FR-glados_fr-medium.onnx",
+      "language_name": "French"
+    },
+    "de_DE-karlsson-low": {
+      "language": "de_DE",
+      "name": "German",
+      "model_file": "de_DE-karlsson-low.onnx",
+      "language_name": "German"
+    },
+    "en_US-amy-low": {
+      "language": "en_US",
+      "name": "English",
+      "model_file": "en_US-amy-low.onnx",
+      "language_name": "English (US)"
+    },
+    "en_US-joe-medium": {
+      "language": "en_US",
+      "name": "English",
+      "model_file": "en_US-joe-medium.onnx",
+      "language_name": "English (US)"
+    },
+    "es_MX-ald-medium": {
+      "language": "es_MX",
+      "name": "Spanish",
+      "model_file": "es_MX-ald-medium.onnx",
+      "language_name": "Spanish (Mexico)"
+    },
+    "miro_de-DE": {
+      "language": "de",
+      "name": "miro_de-DE",
+      "model_file": "miro_de-DE.onnx",
+      "language_name": "German"
+    },
+    "it_IT-paola-medium": {
+      "language": "it_IT",
+      "name": "Italian",
+      "model_file": "it_IT-paola-medium.onnx",
+      "language_name": "Italian"
+    },
+    "es_ES-carlfm-x_low": {
+      "language": "es_ES",
+      "name": "Spanish",
+      "model_file": "es_ES-carlfm-x_low.onnx",
+      "language_name": "Spanish (Spain)"
+    },
+    "es_ES-carlfm-high": {
+      "language": "es",
+      "name": "es_ES-carlfm-high",
+      "model_file": "es_ES-carlfm-high.onnx",
+      "language_name": "Spanish"
+    },
+    "en_GB-northern_english_male-medium": {
+      "language": "en_GB",
+      "name": "English",
+      "model_file": "en_GB-northern_english_male-medium.onnx",
+      "language_name": "English (UK)"
+    },
+    "nl_NL-alex-medium": {
+      "language": "nl_NL",
+      "name": "Dutch",
+      "model_file": "nl_NL-alex-medium.onnx",
+      "language_name": "Dutch (Netherlands)"
+    },
+    "nl_BE-nathalie-medium": {
+      "language": "nl_BE",
+      "name": "Dutch",
+      "model_file": "nl_BE-nathalie-medium.onnx",
+      "language_name": "Dutch (Belgium)"
+    },
+    "miro_sv-SE": {
+      "language": "sv",
+      "name": "miro_sv-SE",
+      "model_file": "miro_sv-SE.onnx",
+      "language_name": "Swedish"
+    },
+    "miro_ar": {
+      "language": "ar",
+      "name": "miro_ar",
+      "model_file": "miro_ar.onnx",
+      "language_name": "Arabic"
+    },
+    "de_DE-pavoque-low": {
+      "language": "de_DE",
+      "name": "German",
+      "model_file": "de_DE-pavoque-low.onnx",
+      "language_name": "German"
+    },
+    "en_US-kristin-medium": {
+      "language": "en_US",
+      "name": "English",
+      "model_file": "en_US-kristin-medium.onnx",
+      "language_name": "English (US)"
+    },
+    "miro_nl-NL": {
+      "language": "nl",
+      "name": "miro_nl-NL",
+      "model_file": "miro_nl-NL.onnx",
+      "language_name": "Dutch"
+    },
+    "hu_HU-berta-medium": {
+      "language": "hu_HU",
+      "name": "Hungarian",
+      "model_file": "hu_HU-berta-medium.onnx",
+      "language_name": "Hungarian"
+    },
+    "kk_KZ-raya-x_low": {
+      "language": "kk_KZ",
+      "name": "Kazakh",
+      "model_file": "kk_KZ-raya-x_low.onnx",
+      "language_name": "Kazakh"
+    },
+    "pt_BR-jeff-medium": {
+      "language": "pt_BR",
+      "name": "Portuguese",
+      "model_file": "pt_BR-jeff-medium.onnx",
+      "language_name": "Portuguese (Brazil)"
+    },
+    "es_ES-mls_9972-low": {
+      "language": "es_ES",
+      "name": "Spanish",
+      "model_file": "es_ES-mls_9972-low.onnx",
+      "language_name": "Spanish (Spain)"
+    },
+    "de_DE-glados-medium": {
+      "language": "de",
+      "name": "de_DE-glados-medium",
+      "model_file": "de_DE-glados-medium.onnx",
+      "language_name": "German"
+    },
+    "cs_CZ-jirka-medium": {
+      "language": "cs_CZ",
+      "name": "Czech",
+      "model_file": "cs_CZ-jirka-medium.onnx",
+      "language_name": "Czech"
+    },
+    "en_US-l2arctic-medium": {
+      "language": "en_US",
+      "name": "English",
+      "model_file": "en_US-l2arctic-medium.onnx",
+      "language_name": "English (US)"
+    },
+    "de_DE-thorsten_emotional-medium": {
+      "language": "de_DE",
+      "name": "German",
+      "model_file": "de_DE-thorsten_emotional-medium.onnx",
+      "language_name": "German"
+    },
+    "tuga-tts-train-synthetic-voice3": {
+      "language": "pt",
+      "name": "tuga-tts-train-synthetic-voice3",
+      "model_file": "tuga-tts-train-synthetic-voice3.onnx",
+      "language_name": "Portuguese"
+    },
+    "de_DE-kerstin-low": {
+      "language": "de_DE",
+      "name": "German",
+      "model_file": "de_DE-kerstin-low.onnx",
+      "language_name": "German"
+    },
+    "nl_NL-pim-medium": {
+      "language": "nl_NL",
+      "name": "Dutch",
+      "model_file": "nl_NL-pim-medium.onnx",
+      "language_name": "Dutch (Netherlands)"
+    },
+    "ca_ES-upc_pau-x_low": {
+      "language": "ca_ES",
+      "name": "Catalan",
+      "model_file": "ca_ES-upc_pau-x_low.onnx",
+      "language_name": "Catalan"
+    },
+    "ru_RU-denis-medium": {
+      "language": "ru_RU",
+      "name": "Russian",
+      "model_file": "ru_RU-denis-medium.onnx",
+      "language_name": "Russian"
+    },
+    "tuga-tts-train-synthetic-voice4": {
+      "language": "pt",
+      "name": "tuga-tts-train-synthetic-voice4",
+      "model_file": "tuga-tts-train-synthetic-voice4.onnx",
+      "language_name": "Portuguese"
+    },
+    "sv_SE-nst-medium": {
+      "language": "sv_SE",
+      "name": "Swedish",
+      "model_file": "sv_SE-nst-medium.onnx",
+      "language_name": "Swedish"
+    },
+    "ro_RO-mihai-medium": {
+      "language": "ro_RO",
+      "name": "Romanian",
+      "model_file": "ro_RO-mihai-medium.onnx",
+      "language_name": "Romanian"
+    },
+    "en_US-ljspeech-high": {
+      "language": "en_US",
+      "name": "English",
+      "model_file": "en_US-ljspeech-high.onnx",
+      "language_name": "English (US)"
+    },
+    "es_MX-laura-high": {
+      "language": "es-419",
+      "name": "es_MX-laura-high",
+      "model_file": "es_MX-laura-high.onnx",
+      "language_name": "Spanish"
+    },
+    "es_AR-daniela-high": {
+      "language": "es_AR",
+      "name": "Spanish",
+      "model_file": "es_AR-daniela-high.onnx",
+      "language_name": "Spanish (Argentina)"
+    },
+    "de_DE-glados-turret-medium": {
+      "language": "de",
+      "name": "de_DE-glados-turret-medium",
+      "model_file": "de_DE-glados-turret-medium.onnx",
+      "language_name": "German"
+    },
+    "is_IS-ugla-medium": {
+      "language": "is_IS",
+      "name": "Icelandic",
+      "model_file": "is_IS-ugla-medium.onnx",
+      "language_name": "Icelandic"
+    },
+    "pt_BR-faber-medium": {
+      "language": "pt_BR",
+      "name": "Portuguese",
+      "model_file": "pt_BR-faber-medium.onnx",
+      "language_name": "Portuguese (Brazil)"
+    },
+    "cy_GB-bu_tts-medium": {
+      "language": "cy_GB",
+      "name": "Welsh",
+      "model_file": "cy_GB-bu_tts-medium.onnx",
+      "language_name": "Welsh"
+    },
+    "no_NO-talesyntese-medium": {
+      "language": "no_NO",
+      "name": "Norwegian",
+      "model_file": "no_NO-talesyntese-medium.onnx",
+      "language_name": "Norwegian"
+    },
+    "de_DE-thorsten-high": {
+      "language": "de_DE",
+      "name": "German",
+      "model_file": "de_DE-thorsten-high.onnx",
+      "language_name": "German"
+    },
+    "hu_HU-imre-medium": {
+      "language": "hu_HU",
+      "name": "Hungarian",
+      "model_file": "hu_HU-imre-medium.onnx",
+      "language_name": "Hungarian"
+    },
+    "is_IS-salka-medium": {
+      "language": "is_IS",
+      "name": "Icelandic",
+      "model_file": "is_IS-salka-medium.onnx",
+      "language_name": "Icelandic"
+    },
+    "fa_IR-amir-medium": {
+      "language": "fa_IR",
+      "name": "Farsi",
+      "model_file": "fa_IR-amir-medium.onnx",
+      "language_name": "Persian"
+    },
+    "miro_en-GB": {
+      "language": "en-gb-x-rp",
+      "name": "miro_en-GB",
+      "model_file": "miro_en-GB.onnx",
+      "language_name": "English"
+    },
+    "cy_GB-gwryw_gogleddol-medium": {
+      "language": "cy_GB",
+      "name": "Welsh",
+      "model_file": "cy_GB-gwryw_gogleddol-medium.onnx",
+      "language_name": "Welsh"
+    },
+    "sq_AL-dren-medium": {
+      "language": "sq_AL",
+      "name": "sq_AL-dren-medium",
+      "model_file": "sq_AL-dren-medium.onnx",
+      "language_name": "Albanian"
+    },
+    "de_DE-mls-medium": {
+      "language": "de_DE",
+      "name": "German",
+      "model_file": "de_DE-mls-medium.onnx",
+      "language_name": "German"
+    },
+    "en_GB-southern_english_female-low": {
+      "language": "en_GB",
+      "name": "English",
+      "model_file": "en_GB-southern_english_female-low.onnx",
+      "language_name": "English (UK)"
+    },
+    "fr_FR-tjiho-model3": {
+      "language": "fr",
+      "name": "fr_FR-tjiho-model3",
+      "model_file": "fr_FR-tjiho-model3.onnx",
+      "language_name": "French"
+    },
+    "sl_SI-artur-medium": {
+      "language": "sl_SI",
+      "name": "Slovenian",
+      "model_file": "sl_SI-artur-medium.onnx",
+      "language_name": "Sl Si"
+    },
+    "fr_FR-mls-medium": {
+      "language": "fr_FR",
+      "name": "French",
+      "model_file": "fr_FR-mls-medium.onnx",
+      "language_name": "French (France)"
+    },
+    "en_US-danny-low": {
+      "language": "en_US",
+      "name": "English",
+      "model_file": "en_US-danny-low.onnx",
+      "language_name": "English (US)"
+    },
+    "pl_PL-mls_6892-low": {
+      "language": "pl_PL",
+      "name": "Polish",
+      "model_file": "pl_PL-mls_6892-low.onnx",
+      "language_name": "Polish"
+    },
+    "kristin": {
+      "language": "en",
+      "name": "kristin",
+      "model_file": "kristin.onnx",
+      "language_name": "English"
+    },
+    "sr_RS-serbski_institut-medium": {
+      "language": "sr_RS",
+      "name": "Serbian",
+      "model_file": "sr_RS-serbski_institut-medium.onnx",
+      "language_name": "Serbian"
+    },
+    "pl_PL-darkman-medium": {
+      "language": "pl_PL",
+      "name": "Polish",
+      "model_file": "pl_PL-darkman-medium.onnx",
+      "language_name": "Polish"
+    },
+    "hi_IN-rohan-medium": {
+      "language": "hi_IN",
+      "name": "Hindi",
+      "model_file": "hi_IN-rohan-medium.onnx",
+      "language_name": "Hindi"
+    },
+    "pt_BR-cadu-medium": {
+      "language": "pt_BR",
+      "name": "Portuguese",
+      "model_file": "pt_BR-cadu-medium.onnx",
+      "language_name": "Portuguese (Brazil)"
+    },
+    "ca_ES-upc_ona-medium": {
+      "language": "ca_ES",
+      "name": "Catalan",
+      "model_file": "ca_ES-upc_ona-medium.onnx",
+      "language_name": "Catalan"
+    },
+    "fr_FR-siwis-low": {
+      "language": "fr_FR",
+      "name": "French",
+      "model_file": "fr_FR-siwis-low.onnx",
+      "language_name": "French (France)"
+    },
+    "ur_PK-fasih-medium-model": {
+      "language": "ur_PK",
+      "name": "Urdu",
+      "model_file": "ur_PK-fasih-medium-model.onnx",
+      "language_name": "Ur Pk"
+    },
+    "is_IS-bui-medium": {
+      "language": "is_IS",
+      "name": "Icelandic",
+      "model_file": "is_IS-bui-medium.onnx",
+      "language_name": "Icelandic"
+    },
+    "ne_NP-google-medium": {
+      "language": "ne_NP",
+      "name": "Nepali",
+      "model_file": "ne_NP-google-medium.onnx",
+      "language_name": "Nepali"
+    },
+    "fa_IR-gyro-medium": {
+      "language": "fa_IR",
+      "name": "Farsi",
+      "model_file": "fa_IR-gyro-medium.onnx",
+      "language_name": "Persian"
+    },
+    "dii_es-CO": {
+      "language": "es-419",
+      "name": "dii_es-CO",
+      "model_file": "dii_es-CO.onnx",
+      "language_name": "Spanish"
+    },
+    "hu_HU-anna-medium": {
+      "language": "hu_HU",
+      "name": "Hungarian",
+      "model_file": "hu_HU-anna-medium.onnx",
+      "language_name": "Hungarian"
+    },
+    "en_GB-cori-high": {
+      "language": "en_GB",
+      "name": "English",
+      "model_file": "en_GB-cori-high.onnx",
+      "language_name": "English (UK)"
+    },
+    "en_US-lessac-high": {
+      "language": "en_US",
+      "name": "English",
+      "model_file": "en_US-lessac-high.onnx",
+      "language_name": "English (US)"
+    },
+    "en_US-kathleen-low": {
+      "language": "en_US",
+      "name": "English",
+      "model_file": "en_US-kathleen-low.onnx",
+      "language_name": "English (US)"
+    },
+    "vi_VN-vivos-x_low": {
+      "language": "vi_VN",
+      "name": "Vietnamese",
+      "model_file": "vi_VN-vivos-x_low.onnx",
+      "language_name": "Vietnamese"
+    },
+    "dii_eu-ES": {
+      "language": "eu",
+      "name": "dii_eu-ES",
+      "model_file": "dii_eu-ES.onnx",
+      "language_name": "Basque"
+    },
+    "sv_SE-alma-medium": {
+      "language": "sv_SE",
+      "name": "Swedish",
+      "model_file": "sv_SE-alma-medium.onnx",
+      "language_name": "Swedish"
+    },
+    "jarvis-medium": {
+      "language": "en_GB",
+      "name": "English",
+      "model_file": "jarvis-medium.onnx",
+      "language_name": "English (UK)"
+    },
+    "en_US-hfc_female-medium": {
+      "language": "en_US",
+      "name": "English",
+      "model_file": "en_US-hfc_female-medium.onnx",
+      "language_name": "English (US)"
+    },
+    "zh_CN-huayan-medium": {
+      "language": "zh_CN",
+      "name": "Chinese",
+      "model_file": "zh_CN-huayan-medium.onnx",
+      "language_name": "Chinese (Mandarin)"
+    },
+    "sq_AL-arta-medium": {
+      "language": "sq_AL",
+      "name": "sq_AL-arta-medium",
+      "model_file": "sq_AL-arta-medium.onnx",
+      "language_name": "Albanian"
+    },
+    "ru_RU-irina-medium": {
+      "language": "ru_RU",
+      "name": "Russian",
+      "model_file": "ru_RU-irina-medium.onnx",
+      "language_name": "Russian"
+    },
+    "en_GB-alan-medium": {
+      "language": "en_GB",
+      "name": "English",
+      "model_file": "en_GB-alan-medium.onnx",
+      "language_name": "English (UK)"
+    },
+    "miro_es-CO": {
+      "language": "es-419",
+      "name": "miro_es-CO",
+      "model_file": "miro_es-CO.onnx",
+      "language_name": "Spanish"
+    },
+    "fa_IR-ganji_adabi-medium": {
+      "language": "fa_IR",
+      "name": "Farsi",
+      "model_file": "fa_IR-ganji_adabi-medium.onnx",
+      "language_name": "Persian"
+    },
+    "miro_ca": {
+      "language": "ca",
+      "name": "miro_ca",
+      "model_file": "miro_ca.onnx",
+      "language_name": "Catalan"
+    },
+    "nl_NL-mls-medium": {
+      "language": "nl_NL",
+      "name": "Dutch",
+      "model_file": "nl_NL-mls-medium.onnx",
+      "language_name": "Dutch (Netherlands)"
+    },
+    "uk_UA-ukrainian_tts-medium": {
+      "language": "uk_UA",
+      "name": "Ukrainian",
+      "model_file": "uk_UA-ukrainian_tts-medium.onnx",
+      "language_name": "Ukrainian"
+    },
+    "nl_NL-mls_7432-low": {
+      "language": "nl_NL",
+      "name": "Dutch",
+      "model_file": "nl_NL-mls_7432-low.onnx",
+      "language_name": "Dutch (Netherlands)"
+    },
+    "16Speakers": {
+      "language": "en",
+      "name": "16Speakers",
+      "model_file": "16Speakers.onnx",
+      "language_name": "English"
+    },
+    "pl_PL-bass-high": {
+      "language": "pl_PL",
+      "name": "Polish",
+      "model_file": "pl_PL-bass-high.onnx",
+      "language_name": "Polish"
+    },
+    "es_ES-mls_10246-low": {
+      "language": "es_ES",
+      "name": "Spanish",
+      "model_file": "es_ES-mls_10246-low.onnx",
+      "language_name": "Spanish (Spain)"
+    },
+    "miro_pt-PT": {
+      "language": "pt-PT",
+      "name": "miro_pt-PT",
+      "model_file": "miro_pt-PT.onnx",
+      "language_name": "Portuguese"
+    },
+    "miro_pt-BR": {
+      "language": "pt-br",
+      "name": "miro_pt-BR",
+      "model_file": "miro_pt-BR.onnx",
+      "language_name": "Portuguese"
+    },
+    "en_US-amy-medium": {
+      "language": "en_US",
+      "name": "English",
+      "model_file": "en_US-amy-medium.onnx",
+      "language_name": "English (US)"
+    },
+    "sv_SE-lisa-medium": {
+      "language": "sv_SE",
+      "name": "Swedish",
+      "model_file": "sv_SE-lisa-medium.onnx",
+      "language_name": "Swedish"
+    },
+    "fr_FR-upmc-medium": {
+      "language": "fr_FR",
+      "name": "French",
+      "model_file": "fr_FR-upmc-medium.onnx",
+      "language_name": "French (France)"
+    },
+    "sw_CD-lanfrica-medium": {
+      "language": "sw_CD",
+      "name": "Swahili",
+      "model_file": "sw_CD-lanfrica-medium.onnx",
+      "language_name": "Swahili (Congo)"
+    },
+    "kk_KZ-issai-high": {
+      "language": "kk_KZ",
+      "name": "Kazakh",
+      "model_file": "kk_KZ-issai-high.onnx",
+      "language_name": "Kazakh"
+    },
+    "ru_RU-ruslan-medium": {
+      "language": "ru_RU",
+      "name": "Russian",
+      "model_file": "ru_RU-ruslan-medium.onnx",
+      "language_name": "Russian"
+    },
+    "lv_LV-aivars-medium": {
+      "language": "lv_LV",
+      "name": "Latvian",
+      "model_file": "lv_LV-aivars-medium.onnx",
+      "language_name": "Latvian"
+    },
+    "en_GB-alba-medium": {
+      "language": "en_GB",
+      "name": "English",
+      "model_file": "en_GB-alba-medium.onnx",
+      "language_name": "English (UK)"
+    },
+    "fr_FR-tom-medium": {
+      "language": "fr_FR",
+      "name": "French",
+      "model_file": "fr_FR-tom-medium.onnx",
+      "language_name": "French (France)"
+    },
+    "nl_NL-ronnie-medium": {
+      "language": "nl_NL",
+      "name": "Dutch",
+      "model_file": "nl_NL-ronnie-medium.onnx",
+      "language_name": "Dutch (Netherlands)"
+    },
+    "en_US-hfc_male-medium": {
+      "language": "en_US",
+      "name": "English",
+      "model_file": "en_US-hfc_male-medium.onnx",
+      "language_name": "English (US)"
+    },
+    "fr_FR-siwis-medium": {
+      "language": "fr_FR",
+      "name": "French",
+      "model_file": "fr_FR-siwis-medium.onnx",
+      "language_name": "French (France)"
+    },
+    "tr_TR-dfki-medium": {
+      "language": "tr_TR",
+      "name": "Turkish",
+      "model_file": "tr_TR-dfki-medium.onnx",
+      "language_name": "Turkish"
+    },
+    "de_DE-glados-high": {
+      "language": "de",
+      "name": "de_DE-glados-high",
+      "model_file": "de_DE-glados-high.onnx",
+      "language_name": "German"
+    },
+    "jarvis-high": {
+      "language": "en_GB",
+      "name": "English",
+      "model_file": "jarvis-high.onnx",
+      "language_name": "English (UK)"
+    },
+    "en_US-kusal-medium": {
+      "language": "en_US",
+      "name": "English",
+      "model_file": "en_US-kusal-medium.onnx",
+      "language_name": "English (US)"
+    },
+    "de_DE-glados-turret-low": {
+      "language": "de",
+      "name": "de_DE-glados-turret-low",
+      "model_file": "de_DE-glados-turret-low.onnx",
+      "language_name": "German"
+    },
+    "te_IN-padmavathi-medium": {
+      "language": "te_IN",
+      "name": "Telugu",
+      "model_file": "te_IN-padmavathi-medium.onnx",
+      "language_name": "Telugu"
+    },
+    "dii_en-GB": {
+      "language": "en-gb-x-rp",
+      "name": "dii_en-GB",
+      "model_file": "dii_en-GB.onnx",
+      "language_name": "English"
+    },
+    "ml_IN-arjun-medium": {
+      "language": "ml_IN",
+      "name": "Malayalam",
+      "model_file": "ml_IN-arjun-medium.onnx",
+      "language_name": "Malayalam"
+    },
+    "hi_IN-pratham-medium": {
+      "language": "hi_IN",
+      "name": "Hindi",
+      "model_file": "hi_IN-pratham-medium.onnx",
+      "language_name": "Hindi"
+    },
+    "en_US-ryan-high": {
+      "language": "en_US",
+      "name": "English",
+      "model_file": "en_US-ryan-high.onnx",
+      "language_name": "English (US)"
+    },
+    "ml_IN-meera-medium": {
+      "language": "ml_IN",
+      "name": "Malayalam",
+      "model_file": "ml_IN-meera-medium.onnx",
+      "language_name": "Malayalam"
+    },
+    "jenny": {
+      "language": "en",
+      "name": "jenny",
+      "model_file": "jenny.onnx",
+      "language_name": "English"
+    },
+    "en_GB-semaine-medium": {
+      "language": "en_GB",
+      "name": "English",
+      "model_file": "en_GB-semaine-medium.onnx",
+      "language_name": "English (UK)"
+    },
+    "ru_RU-dmitri-medium": {
+      "language": "ru_RU",
+      "name": "Russian",
+      "model_file": "ru_RU-dmitri-medium.onnx",
+      "language_name": "Russian"
+    },
+    "fi_FI-harri-medium": {
+      "language": "fi_FI",
+      "name": "Finnish",
+      "model_file": "fi_FI-harri-medium.onnx",
+      "language_name": "Finnish"
+    },
+    "de_DE-eva_k-x_low": {
+      "language": "de_DE",
+      "name": "German",
+      "model_file": "de_DE-eva_k-x_low.onnx",
+      "language_name": "German"
+    },
+    "de_DE-glados-low": {
+      "language": "de",
+      "name": "de_DE-glados-low",
+      "model_file": "de_DE-glados-low.onnx",
+      "language_name": "German"
+    },
+    "el_GR-rapunzelina-medium": {
+      "language": "el_GR",
+      "name": "Greek",
+      "model_file": "el_GR-rapunzelina-medium.onnx",
+      "language_name": "Greek"
+    },
+    "en_US-norman-medium": {
+      "language": "en_US",
+      "name": "English",
+      "model_file": "en_US-norman-medium.onnx",
+      "language_name": "English (US)"
+    },
+    "fr_FR-gilles-low": {
+      "language": "fr_FR",
+      "name": "French",
+      "model_file": "fr_FR-gilles-low.onnx",
+      "language_name": "French (France)"
+    },
+    "te_IN-venkatesh-medium": {
+      "language": "te_IN",
+      "name": "Telugu",
+      "model_file": "te_IN-venkatesh-medium.onnx",
+      "language_name": "Telugu"
+    },
+    "hal": {
+      "language": "en_US",
+      "name": "hal",
+      "model_file": "hal.onnx",
+      "language_name": "English (US)"
+    },
+    "id_ID-news_tts-medium": {
+      "language": "id_ID",
+      "name": "Indonesian",
+      "model_file": "id_ID-news_tts-medium.onnx",
+      "language_name": "Indonesian"
+    },
+    "ne_NP-chitwan-medium": {
+      "language": "ne_NP",
+      "name": "Nepali",
+      "model_file": "ne_NP-chitwan-medium.onnx",
+      "language_name": "Nepali"
+    },
+    "en_US-libritts_r-medium": {
+      "language": "en_US",
+      "name": "English",
+      "model_file": "en_US-libritts_r-medium.onnx",
+      "language_name": "English (US)"
+    },
+    "dii_ar": {
+      "language": "ar",
+      "name": "dii_ar",
+      "model_file": "dii_ar.onnx",
+      "language_name": "Arabic"
+    },
+    "de_DE-ramona-low": {
+      "language": "de_DE",
+      "name": "German",
+      "model_file": "de_DE-ramona-low.onnx",
+      "language_name": "German"
+    },
+    "hi_IN-priyamvada-medium": {
+      "language": "hi_IN",
+      "name": "Hindi",
+      "model_file": "hi_IN-priyamvada-medium.onnx",
+      "language_name": "Hindi"
+    },
+    "en_US-lessac-low": {
+      "language": "en_US",
+      "name": "English",
+      "model_file": "en_US-lessac-low.onnx",
+      "language_name": "English (US)"
+    },
+    "fr_FR-tjiho-model2": {
+      "language": "fr",
+      "name": "fr_FR-tjiho-model2",
+      "model_file": "fr_FR-tjiho-model2.onnx",
+      "language_name": "French"
+    },
+    "en_US-reza_ibrahim-medium": {
+      "language": "en_US",
+      "name": "English",
+      "model_file": "en_US-reza_ibrahim-medium.onnx",
+      "language_name": "English (US)"
+    },
+    "pt_BR-edresson-low": {
+      "language": "pt_BR",
+      "name": "Portuguese",
+      "model_file": "pt_BR-edresson-low.onnx",
+      "language_name": "Portuguese (Brazil)"
+    },
+    "de_DE-glados-turret-high": {
+      "language": "de",
+      "name": "de_DE-glados-turret-high",
+      "model_file": "de_DE-glados-turret-high.onnx",
+      "language_name": "German"
+    },
+    "vi_VN-25hours_single-low": {
+      "language": "vi_VN",
+      "name": "Vietnamese",
+      "model_file": "vi_VN-25hours_single-low.onnx",
+      "language_name": "Vietnamese"
+    },
+    "nl_NL-mls_5809-low": {
+      "language": "nl_NL",
+      "name": "Dutch",
+      "model_file": "nl_NL-mls_5809-low.onnx",
+      "language_name": "Dutch (Netherlands)"
+    },
+    "es_MX-claude-high": {
+      "language": "es_MX",
+      "name": "Spanish",
+      "model_file": "es_MX-claude-high.onnx",
+      "language_name": "Spanish (Mexico)"
+    },
+    "miro_es-ES": {
+      "language": "es",
+      "name": "miro_es-ES",
+      "model_file": "miro_es-ES.onnx",
+      "language_name": "Spanish"
+    },
+    "ka_GE-natia-medium": {
+      "language": "ka_GE",
+      "name": "Georgian",
+      "model_file": "ka_GE-natia-medium.onnx",
+      "language_name": "Georgian"
+    },
+    "es_ES-sharvard-medium": {
+      "language": "es_ES",
+      "name": "Spanish",
+      "model_file": "es_ES-sharvard-medium.onnx",
+      "language_name": "Spanish (Spain)"
+    },
+    "sk_SK-lili-medium": {
+      "language": "sk_SK",
+      "name": "Slovak",
+      "model_file": "sk_SK-lili-medium.onnx",
+      "language_name": "Slovak"
+    },
+    "en_GB-alan-low": {
+      "language": "en_GB",
+      "name": "English",
+      "model_file": "en_GB-alan-low.onnx",
+      "language_name": "English (UK)"
+    },
+    "sq_AL-arben-medium": {
+      "language": "sq_AL",
+      "name": "sq_AL-arben-medium",
+      "model_file": "sq_AL-arben-medium.onnx",
+      "language_name": "Albanian"
+    },
+    "fr_FR-mls_1840-low": {
+      "language": "fr_FR",
+      "name": "French",
+      "model_file": "fr_FR-mls_1840-low.onnx",
+      "language_name": "French (France)"
+    },
+    "en_US-bryce-medium": {
+      "language": "en_US",
+      "name": "English",
+      "model_file": "en_US-bryce-medium.onnx",
+      "language_name": "English (US)"
+    },
+    "fa_IR-ganji-medium": {
+      "language": "fa_IR",
+      "name": "Farsi",
+      "model_file": "fa_IR-ganji-medium.onnx",
+      "language_name": "Persian"
+    },
+    "vi_VN-vais1000-medium": {
+      "language": "vi_VN",
+      "name": "Vietnamese",
+      "model_file": "vi_VN-vais1000-medium.onnx",
+      "language_name": "Vietnamese"
+    },
+    "ar_JO-kareem-medium": {
+      "language": "ar_JO",
+      "name": "Arabic",
+      "model_file": "ar_JO-kareem-medium.onnx",
+      "language_name": "Arabic (Jordan)"
+    },
+    "dii_pt-BR": {
+      "language": "pt-br",
+      "name": "dii_pt-BR",
+      "model_file": "dii_pt-BR.onnx",
+      "language_name": "Portuguese"
+    },
+    "bg_BG-dimitar-medium": {
+      "language": "bg_BG",
+      "name": "Bulgarian",
+      "model_file": "bg_BG-dimitar-medium.onnx",
+      "language_name": "Bg Bg"
+    },
+    "dii_nl-NL": {
+      "language": "nl",
+      "name": "dii_nl-NL",
+      "model_file": "dii_nl-NL.onnx",
+      "language_name": "Dutch"
+    },
+    "pl_PL-mc_speech-medium": {
+      "language": "pl_PL",
+      "name": "Polish",
+      "model_file": "pl_PL-mc_speech-medium.onnx",
+      "language_name": "Polish"
+    },
+    "miro_fr-FR": {
+      "language": "fr",
+      "name": "miro_fr-FR",
+      "model_file": "miro_fr-FR.onnx",
+      "language_name": "French"
+    },
+    "en_GB-aru-medium": {
+      "language": "en_GB",
+      "name": "English",
+      "model_file": "en_GB-aru-medium.onnx",
+      "language_name": "English (UK)"
+    },
+    "sq_AL-edon-medium": {
+      "language": "sq_AL",
+      "name": "sq_AL-edon-medium",
+      "model_file": "sq_AL-edon-medium.onnx",
+      "language_name": "Albanian"
+    },
+    "dii_de-DE": {
+      "language": "de",
+      "name": "dii_de-DE",
+      "model_file": "dii_de-DE.onnx",
+      "language_name": "German"
+    },
+    "miro_it-IT": {
+      "language": "it",
+      "name": "miro_it-IT",
+      "model_file": "miro_it-IT.onnx",
+      "language_name": "Italian"
+    },
+    "uk_UA-lada-x_low": {
+      "language": "uk_UA",
+      "name": "Ukrainian",
+      "model_file": "uk_UA-lada-x_low.onnx",
+      "language_name": "Ukrainian"
+    },
+    "en_US-ryan-low": {
+      "language": "en_US",
+      "name": "English",
+      "model_file": "en_US-ryan-low.onnx",
+      "language_name": "English (US)"
+    },
+    "fr_FR-tjiho-model1": {
+      "language": "fr",
+      "name": "fr_FR-tjiho-model1",
+      "model_file": "fr_FR-tjiho-model1.onnx",
+      "language_name": "French"
+    },
+    "miro_da-DK": {
+      "language": "da",
+      "name": "miro_da-DK",
+      "model_file": "miro_da-DK.onnx",
+      "language_name": "Danish"
+    },
+    "is_IS-steinn-medium": {
+      "language": "is_IS",
+      "name": "Icelandic",
+      "model_file": "is_IS-steinn-medium.onnx",
+      "language_name": "Icelandic"
+    },
+    "en_US-arctic-medium": {
+      "language": "en_US",
+      "name": "English",
+      "model_file": "en_US-arctic-medium.onnx",
+      "language_name": "English (US)"
+    }
+  },
+  "_meta": {
+    "languages": {
+      "nl_BE": "Dutch (Belgium)",
+      "en_GB": "English (UK)",
+      "da_DK": "Danish",
+      "it": "Italian",
+      "en_US": "English (US)",
+      "te_IN": "Telugu",
+      "en-us": "English",
+      "fr": "French",
+      "de_DE": "German",
+      "pt": "Portuguese",
+      "es_MX": "Spanish (Mexico)",
+      "en": "English",
+      "de": "German",
+      "it_IT": "Italian",
+      "es_ES": "Spanish (Spain)",
+      "zh_CN": "Chinese (Mandarin)",
+      "es": "Spanish",
+      "nl_NL": "Dutch (Netherlands)",
+      "eu": "Basque",
+      "sv": "Swedish",
+      "ar": "Arabic",
+      "nl": "Dutch",
+      "hu_HU": "Hungarian",
+      "kk_KZ": "Kazakh",
+      "pt_BR": "Portuguese (Brazil)",
+      "cs_CZ": "Czech",
+      "ca_ES": "Catalan",
+      "ru_RU": "Russian",
+      "sv_SE": "Swedish",
+      "ro_RO": "Romanian",
+      "es-419": "Spanish",
+      "es_AR": "Spanish (Argentina)",
+      "is_IS": "Icelandic",
+      "cy_GB": "Welsh",
+      "no_NO": "Norwegian",
+      "fa_IR": "Persian",
+      "en-gb-x-rp": "English",
+      "sl_SI": "Slovenian",
+      "fr_FR": "French (France)",
+      "pl_PL": "Polish",
+      "sr_RS": "Serbian",
+      "hi_IN": "Hindi",
+      "ur_PK": "Urdu",
+      "ne_NP": "Nepali",
+      "vi_VN": "Vietnamese",
+      "uk_UA": "Ukrainian",
+      "pt-PT": "Portuguese",
+      "pt-br": "Portuguese",
+      "sw_CD": "Swahili (Congo)",
+      "lv_LV": "Latvian",
+      "tr_TR": "Turkish",
+      "ml_IN": "Malayalam",
+      "fi_FI": "Finnish",
+      "el_GR": "Greek",
+      "id_ID": "Indonesian",
+      "ka_GE": "Georgian",
+      "sk_SK": "Slovak",
+      "ar_JO": "Arabic (Jordan)",
+      "bg_BG": "Bulgarian",
+      "sq_AL": "Albanian",
+      "ca": "Catalan",
+      "da": "Danish"
+    }
+  }
+}

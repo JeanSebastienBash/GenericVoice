@@ -1,0 +1,680 @@
+{
+  "voices": {
+    "af": {
+      "name": "Afrikaans",
+      "language": "af",
+      "gender": "Male",
+      "model_file": "gmw/af",
+      "language_name": "Afrikaans"
+    },
+    "am": {
+      "name": "Amharic",
+      "language": "am",
+      "gender": "Male",
+      "model_file": "sem/am",
+      "language_name": "Amharic"
+    },
+    "an": {
+      "name": "Aragonese",
+      "language": "an",
+      "gender": "Male",
+      "model_file": "roa/an",
+      "language_name": "Aragonese"
+    },
+    "as": {
+      "name": "Assamese",
+      "language": "as",
+      "gender": "Male",
+      "model_file": "inc/as",
+      "language_name": "Assamese"
+    },
+    "az": {
+      "name": "Azerbaijani",
+      "language": "az",
+      "gender": "Male",
+      "model_file": "trk/az",
+      "language_name": "Azerbaijani"
+    },
+    "bg": {
+      "name": "Bulgarian",
+      "language": "bg",
+      "gender": "Male",
+      "model_file": "zls/bg",
+      "language_name": "Bulgarian"
+    },
+    "bn": {
+      "name": "Bengali",
+      "language": "bn",
+      "gender": "Male",
+      "model_file": "inc/bn",
+      "language_name": "Bengali"
+    },
+    "bs": {
+      "name": "Bosnian",
+      "language": "bs",
+      "gender": "Male",
+      "model_file": "zls/bs",
+      "language_name": "Bosnian"
+    },
+    "ca": {
+      "name": "Catalan",
+      "language": "ca",
+      "gender": "Male",
+      "model_file": "roa/ca",
+      "language_name": "Catalan"
+    },
+    "cs": {
+      "name": "Czech",
+      "language": "cs",
+      "gender": "Male",
+      "model_file": "zlw/cs",
+      "language_name": "Czech"
+    },
+    "cy": {
+      "name": "Welsh",
+      "language": "cy",
+      "gender": "Male",
+      "model_file": "cel/cy",
+      "language_name": "Welsh"
+    },
+    "da": {
+      "name": "Danish",
+      "language": "da",
+      "gender": "Male",
+      "model_file": "gmq/da",
+      "language_name": "Danish"
+    },
+    "de": {
+      "name": "German",
+      "language": "de",
+      "gender": "Male",
+      "model_file": "gmw/de",
+      "language_name": "German"
+    },
+    "el": {
+      "name": "Greek",
+      "language": "el",
+      "gender": "Male",
+      "model_file": "grk/el",
+      "language_name": "Greek"
+    },
+    "en-029": {
+      "name": "English (Caribbean)",
+      "language": "en-029",
+      "gender": "Male",
+      "model_file": "gmw/en-029",
+      "language_name": "English (Caribbean)"
+    },
+    "en-gb": {
+      "name": "English (Great Britain)",
+      "language": "en-gb",
+      "gender": "Male",
+      "model_file": "gmw/en",
+      "language_name": "English (UK)"
+    },
+    "en-gb-scotland": {
+      "name": "English (Scotland)",
+      "language": "en-gb-scotland",
+      "gender": "Male",
+      "model_file": "gmw/en-GB-scotland",
+      "language_name": "En Gb Scotland"
+    },
+    "en-gb-x-gbclan": {
+      "name": "English (Lancaster)",
+      "language": "en-gb-x-gbclan",
+      "gender": "Male",
+      "model_file": "gmw/en-GB-x-gbclan",
+      "language_name": "En Gb X Gbclan"
+    },
+    "en-gb-x-gbcwmd": {
+      "name": "English (West Midlands)",
+      "language": "en-gb-x-gbcwmd",
+      "gender": "Male",
+      "model_file": "gmw/en-GB-x-gbcwmd",
+      "language_name": "En Gb X Gbcwmd"
+    },
+    "en-gb-x-rp": {
+      "name": "English (Received Pronunciation)",
+      "language": "en-gb-x-rp",
+      "gender": "Male",
+      "model_file": "gmw/en-GB-x-rp",
+      "language_name": "En Gb X Rp"
+    },
+    "en-us": {
+      "name": "English (America)",
+      "language": "en-us",
+      "gender": "Male",
+      "model_file": "gmw/en-US",
+      "language_name": "English (US)"
+    },
+    "eo": {
+      "name": "Esperanto",
+      "language": "eo",
+      "gender": "Male",
+      "model_file": "art/eo",
+      "language_name": "Esperanto"
+    },
+    "es": {
+      "name": "Spanish (Spain)",
+      "language": "es",
+      "gender": "Male",
+      "model_file": "roa/es",
+      "language_name": "Spanish"
+    },
+    "es-419": {
+      "name": "Spanish (Latin America)",
+      "language": "es-419",
+      "gender": "Male",
+      "model_file": "roa/es-419",
+      "language_name": "Spanish (Latin America)"
+    },
+    "et": {
+      "name": "Estonian",
+      "language": "et",
+      "gender": "Male",
+      "model_file": "urj/et",
+      "language_name": "Estonian"
+    },
+    "eu": {
+      "name": "Basque",
+      "language": "eu",
+      "gender": "Male",
+      "model_file": "eu",
+      "language_name": "Basque"
+    },
+    "fa": {
+      "name": "Persian",
+      "language": "fa",
+      "gender": "Male",
+      "model_file": "ira/fa",
+      "language_name": "Persian"
+    },
+    "fa-latn": {
+      "name": "Persian (Pinglish)",
+      "language": "fa-latn",
+      "gender": "Male",
+      "model_file": "ira/fa-Latn",
+      "language_name": "Persian (Pinglish)"
+    },
+    "fi": {
+      "name": "Finnish",
+      "language": "fi",
+      "gender": "Male",
+      "model_file": "urj/fi",
+      "language_name": "Finnish"
+    },
+    "fr-be": {
+      "name": "French (Belgium)",
+      "language": "fr-be",
+      "gender": "Male",
+      "model_file": "roa/fr-BE",
+      "language_name": "French (Belgium)"
+    },
+    "fr-ch": {
+      "name": "French (Switzerland)",
+      "language": "fr-ch",
+      "gender": "Male",
+      "model_file": "roa/fr-CH",
+      "language_name": "French (Switzerland)"
+    },
+    "fr-fr": {
+      "name": "French (France)",
+      "language": "fr-fr",
+      "gender": "Male",
+      "model_file": "roa/fr",
+      "language_name": "French (France)"
+    },
+    "ga": {
+      "name": "Gaelic (Irish)",
+      "language": "ga",
+      "gender": "Male",
+      "model_file": "cel/ga",
+      "language_name": "Irish"
+    },
+    "gd": {
+      "name": "Gaelic (Scottish)",
+      "language": "gd",
+      "gender": "Male",
+      "model_file": "cel/gd",
+      "language_name": "Scottish Gaelic"
+    },
+    "grc": {
+      "name": "Greek (Ancient)",
+      "language": "grc",
+      "gender": "Male",
+      "model_file": "grk/grc",
+      "language_name": "Greek (Ancient)"
+    },
+    "gu": {
+      "name": "Gujarati",
+      "language": "gu",
+      "gender": "Male",
+      "model_file": "inc/gu",
+      "language_name": "Gujarati"
+    },
+    "hi": {
+      "name": "Hindi",
+      "language": "hi",
+      "gender": "Male",
+      "model_file": "inc/hi",
+      "language_name": "Hindi"
+    },
+    "hr": {
+      "name": "Croatian",
+      "language": "hr",
+      "gender": "Male",
+      "model_file": "zls/hr",
+      "language_name": "Croatian"
+    },
+    "hu": {
+      "name": "Hungarian",
+      "language": "hu",
+      "gender": "Male",
+      "model_file": "urj/hu",
+      "language_name": "Hungarian"
+    },
+    "hy": {
+      "name": "Armenian (East Armenia)",
+      "language": "hy",
+      "gender": "Male",
+      "model_file": "ine/hy",
+      "language_name": "Armenian (East)"
+    },
+    "id": {
+      "name": "Indonesian",
+      "language": "id",
+      "gender": "Male",
+      "model_file": "poz/id",
+      "language_name": "Indonesian"
+    },
+    "is": {
+      "name": "Icelandic",
+      "language": "is",
+      "gender": "Male",
+      "model_file": "gmq/is",
+      "language_name": "Icelandic"
+    },
+    "it": {
+      "name": "Italian",
+      "language": "it",
+      "gender": "Male",
+      "model_file": "roa/it",
+      "language_name": "Italian"
+    },
+    "jbo": {
+      "name": "Lojban",
+      "language": "jbo",
+      "gender": "Male",
+      "model_file": "art/jbo",
+      "language_name": "Lojban"
+    },
+    "ka": {
+      "name": "Georgian",
+      "language": "ka",
+      "gender": "Male",
+      "model_file": "ccs/ka",
+      "language_name": "Georgian"
+    },
+    "kl": {
+      "name": "Greenlandic",
+      "language": "kl",
+      "gender": "Male",
+      "model_file": "esx/kl",
+      "language_name": "Greenlandic"
+    },
+    "kn": {
+      "name": "Kannada",
+      "language": "kn",
+      "gender": "Male",
+      "model_file": "dra/kn",
+      "language_name": "Kannada"
+    },
+    "ko": {
+      "name": "Korean",
+      "language": "ko",
+      "gender": "Male",
+      "model_file": "ko",
+      "language_name": "Korean"
+    },
+    "ku": {
+      "name": "Kurdish",
+      "language": "ku",
+      "gender": "Male",
+      "model_file": "ira/ku",
+      "language_name": "Kurdish"
+    },
+    "la": {
+      "name": "Latin",
+      "language": "la",
+      "gender": "Male",
+      "model_file": "itc/la",
+      "language_name": "Latin"
+    },
+    "lfn": {
+      "name": "Lingua Franca Nova",
+      "language": "lfn",
+      "gender": "Male",
+      "model_file": "art/lfn",
+      "language_name": "Lingua Franca Nova"
+    },
+    "lt": {
+      "name": "Lithuanian",
+      "language": "lt",
+      "gender": "Male",
+      "model_file": "bat/lt",
+      "language_name": "Lithuanian"
+    },
+    "lv": {
+      "name": "Latvian",
+      "language": "lv",
+      "gender": "Male",
+      "model_file": "bat/lv",
+      "language_name": "Latvian"
+    },
+    "mk": {
+      "name": "Macedonian",
+      "language": "mk",
+      "gender": "Male",
+      "model_file": "zls/mk",
+      "language_name": "Macedonian"
+    },
+    "ml": {
+      "name": "Malayalam",
+      "language": "ml",
+      "gender": "Male",
+      "model_file": "dra/ml",
+      "language_name": "Malayalam"
+    },
+    "ms": {
+      "name": "Malay",
+      "language": "ms",
+      "gender": "Male",
+      "model_file": "poz/ms",
+      "language_name": "Malay"
+    },
+    "nb": {
+      "name": "Norwegian Bokmål",
+      "language": "nb",
+      "gender": "Male",
+      "model_file": "gmq/nb",
+      "language_name": "Norwegian Bokmål"
+    },
+    "nci": {
+      "name": "Nahuatl (Classical)",
+      "language": "nci",
+      "gender": "Male",
+      "model_file": "azc/nci",
+      "language_name": "Nahuatl (Classical)"
+    },
+    "ne": {
+      "name": "Nepali",
+      "language": "ne",
+      "gender": "Male",
+      "model_file": "inc/ne",
+      "language_name": "Nepali"
+    },
+    "nl": {
+      "name": "Dutch",
+      "language": "nl",
+      "gender": "Male",
+      "model_file": "gmw/nl",
+      "language_name": "Dutch"
+    },
+    "or": {
+      "name": "Oriya",
+      "language": "or",
+      "gender": "Male",
+      "model_file": "inc/or",
+      "language_name": "Oriya"
+    },
+    "pa": {
+      "name": "Punjabi",
+      "language": "pa",
+      "gender": "Male",
+      "model_file": "inc/pa",
+      "language_name": "Punjabi"
+    },
+    "pap": {
+      "name": "Papiamento",
+      "language": "pap",
+      "gender": "Male",
+      "model_file": "roa/pap",
+      "language_name": "Papiamento"
+    },
+    "pl": {
+      "name": "Polish",
+      "language": "pl",
+      "gender": "Male",
+      "model_file": "zlw/pl",
+      "language_name": "Polish"
+    },
+    "pt": {
+      "name": "Portuguese (Portugal)",
+      "language": "pt",
+      "gender": "Male",
+      "model_file": "roa/pt",
+      "language_name": "Portuguese (Portugal)"
+    },
+    "pt-br": {
+      "name": "Portuguese (Brazil)",
+      "language": "pt-br",
+      "gender": "Male",
+      "model_file": "roa/pt-BR",
+      "language_name": "Portuguese (Brazil)"
+    },
+    "ro": {
+      "name": "Romanian",
+      "language": "ro",
+      "gender": "Male",
+      "model_file": "roa/ro",
+      "language_name": "Romanian"
+    },
+    "ru": {
+      "name": "Russian",
+      "language": "ru",
+      "gender": "Male",
+      "model_file": "zle/ru",
+      "language_name": "Russian"
+    },
+    "ru-lv": {
+      "name": "Russian (Latvia)",
+      "language": "ru-lv",
+      "gender": "Male",
+      "model_file": "zle/ru-LV",
+      "language_name": "Russian (Latvia)"
+    },
+    "si": {
+      "name": "Sinhala",
+      "language": "si",
+      "gender": "Male",
+      "model_file": "inc/si",
+      "language_name": "Sinhala"
+    },
+    "sk": {
+      "name": "Slovak",
+      "language": "sk",
+      "gender": "Male",
+      "model_file": "zlw/sk",
+      "language_name": "Slovak"
+    },
+    "sl": {
+      "name": "Slovenian",
+      "language": "sl",
+      "gender": "Male",
+      "model_file": "zls/sl",
+      "language_name": "Slovenian"
+    },
+    "sq": {
+      "name": "Albanian",
+      "language": "sq",
+      "gender": "Male",
+      "model_file": "ine/sq",
+      "language_name": "Albanian"
+    },
+    "sr": {
+      "name": "Serbian",
+      "language": "sr",
+      "gender": "Male",
+      "model_file": "zls/sr",
+      "language_name": "Serbian"
+    },
+    "sv": {
+      "name": "Swedish",
+      "language": "sv",
+      "gender": "Male",
+      "model_file": "gmq/sv",
+      "language_name": "Swedish"
+    },
+    "sw": {
+      "name": "Swahili",
+      "language": "sw",
+      "gender": "Male",
+      "model_file": "bnt/sw",
+      "language_name": "Swahili"
+    },
+    "ta": {
+      "name": "Tamil",
+      "language": "ta",
+      "gender": "Male",
+      "model_file": "dra/ta",
+      "language_name": "Tamil"
+    },
+    "te": {
+      "name": "Telugu",
+      "language": "te",
+      "gender": "Male",
+      "model_file": "dra/te",
+      "language_name": "Telugu"
+    },
+    "tr": {
+      "name": "Turkish",
+      "language": "tr",
+      "gender": "Male",
+      "model_file": "trk/tr",
+      "language_name": "Turkish"
+    },
+    "ur": {
+      "name": "Urdu",
+      "language": "ur",
+      "gender": "Male",
+      "model_file": "inc/ur",
+      "language_name": "Urdu"
+    },
+    "vi": {
+      "name": "Vietnamese (Northern)",
+      "language": "vi",
+      "gender": "Male",
+      "model_file": "aav/vi",
+      "language_name": "Vietnamese"
+    },
+    "vi-vn-x-central": {
+      "name": "Vietnamese (Central)",
+      "language": "vi-vn-x-central",
+      "gender": "Male",
+      "model_file": "aav/vi-VN-x-central",
+      "language_name": "Vi Vn X Central"
+    },
+    "vi-vn-x-south": {
+      "name": "Vietnamese (Southern)",
+      "language": "vi-vn-x-south",
+      "gender": "Male",
+      "model_file": "aav/vi-VN-x-south",
+      "language_name": "Vi Vn X South"
+    },
+    "yue": {
+      "name": "Chinese (Cantonese)",
+      "language": "yue",
+      "gender": "Male",
+      "model_file": "sit/yue",
+      "language_name": "Yue"
+    }
+  },
+  "_meta": {
+    "languages": {
+      "af": "Afrikaans",
+      "am": "Amharic",
+      "an": "Aragonese",
+      "as": "Assamese",
+      "az": "Azerbaijani",
+      "bg": "Bulgarian",
+      "bn": "Bengali",
+      "bs": "Bosnian",
+      "ca": "Catalan",
+      "cs": "Czech",
+      "cy": "Welsh",
+      "da": "Danish",
+      "de": "German",
+      "el": "Greek",
+      "en-029": "English (Caribbean)",
+      "en-gb": "English (UK)",
+      "en-gb-scotland": "En Gb Scotland",
+      "en-gb-x-gbclan": "En Gb X Gbclan",
+      "en-gb-x-gbcwmd": "En Gb X Gbcwmd",
+      "en-gb-x-rp": "En Gb X Rp",
+      "en-us": "English (US)",
+      "eo": "Esperanto",
+      "es": "Spanish",
+      "es-419": "Spanish (Latin America)",
+      "et": "Estonian",
+      "eu": "Basque",
+      "fa": "Persian",
+      "fa-latn": "Persian (Pinglish)",
+      "fi": "Finnish",
+      "fr-be": "French (Belgium)",
+      "fr-ch": "French (Switzerland)",
+      "fr-fr": "French (France)",
+      "ga": "Irish",
+      "gd": "Scottish Gaelic",
+      "grc": "Greek (Ancient)",
+      "gu": "Gujarati",
+      "hi": "Hindi",
+      "hr": "Croatian",
+      "hu": "Hungarian",
+      "hy": "Armenian (East)",
+      "id": "Indonesian",
+      "is": "Icelandic",
+      "it": "Italian",
+      "jbo": "Lojban",
+      "ka": "Georgian",
+      "kl": "Greenlandic",
+      "kn": "Kannada",
+      "ko": "Korean",
+      "ku": "Kurdish",
+      "la": "Latin",
+      "lfn": "Lingua Franca Nova",
+      "lt": "Lithuanian",
+      "lv": "Latvian",
+      "mk": "Macedonian",
+      "ml": "Malayalam",
+      "ms": "Malay",
+      "nb": "Norwegian Bokmål",
+      "nci": "Nahuatl (Classical)",
+      "ne": "Nepali",
+      "nl": "Dutch",
+      "or": "Oriya",
+      "pa": "Punjabi",
+      "pap": "Papiamento",
+      "pl": "Polish",
+      "pt": "Portuguese (Portugal)",
+      "pt-br": "Portuguese (Brazil)",
+      "ro": "Romanian",
+      "ru": "Russian",
+      "ru-lv": "Russian (Latvia)",
+      "si": "Sinhala",
+      "sk": "Slovak",
+      "sl": "Slovenian",
+      "sq": "Albanian",
+      "sr": "Serbian",
+      "sv": "Swedish",
+      "sw": "Swahili",
+      "ta": "Tamil",
+      "te": "Telugu",
+      "tr": "Turkish",
+      "ur": "Urdu",
+      "vi": "Vietnamese",
+      "vi-vn-x-central": "Vi Vn X Central",
+      "vi-vn-x-south": "Vi Vn X South",
+      "yue": "Yue"
+    }
+  }
+}
