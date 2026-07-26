@@ -2,6 +2,8 @@
 
 Complete guide for using Generic Voice text-to-speech system.
 
+> **Status:** v1.0.2 is feature-complete. There is no public feature roadmap; fixes are reactive.
+
 ## Table of Contents
 
 1. [What is Generic Voice?](#what-is-generic-voice)
@@ -33,9 +35,9 @@ Generic Voice is a command-line tool that provides unified access to multiple Te
 ### System Requirements
 
 - Operating System: Linux (Ubuntu/Debian recommended)
-- Python: Version 3.8 or higher
+- Python: Version 3.10 or higher (required by Flet 0.84)
 - Disk Space: 500MB minimum (for Core version)
-- Internet: Required only for Edge TTS engine
+- Internet: Required only for Edge TTS engine (text is sent to Microsoft when Edge is used)
 
 ### Step-by-Step Setup
 
@@ -56,10 +58,13 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-**Fix missing system dependencies:**
+**Fix missing dependencies (non-root):**
 ```bash
-sudo python3 py/gv.py --auto-fix
+python3 py/gv.py --auto-fix
+python3 py/gv.py --auto-fix --system-os ubuntu
 ```
+
+Install OS packages with your normal package manager if needed. Do not run the whole application under `sudo`.
 
 **Note for GUI (Flet 0.84):** The GUI requires `flet==0.84.0` and `flet-web==0.84.0` which are included in requirements.txt. To run the GUI:
 ```bash
@@ -328,17 +333,17 @@ Example: `20250408_143022_voice.wav`
 If Generic Voice fails to start or reports missing libraries, use `--auto-fix`:
 
 ```bash
-# Auto-fix (detects OS automatically)
-sudo python3 py/gv.py --auto-fix
+# Auto-fix (non-root; may still call sudo for specific packages)
+python3 py/gv.py --auto-fix
 
-# Specify OS explicitly
-sudo python3 py/gv.py --auto-fix --system-os ubuntu
-sudo python3 py/gv.py --auto-fix --system-os debian
-sudo python3 py/gv.py --auto-fix --system-os fedora
+# Specify OS explicitly (allowed exception to the solo-parameter rule)
+python3 py/gv.py --auto-fix --system-os ubuntu
+python3 py/gv.py --auto-fix --system-os debian
+python3 py/gv.py --auto-fix --system-os fedora
 ```
 
-> `--auto-fix` is a solo command — it installs system-level packages and exits.
-> Run it once after installation, or any time a dependency error occurs.
+> Prefer installing system packages yourself, then re-run `--auto-fix` as a normal user.
+> `--auto-fix` accepts only `--system-os` as an extra option.
 
 ### Piper Voices Not Installed
 
@@ -460,22 +465,6 @@ python3 py/gvdemo.py
 - `output/demo/demo_errors.log` — Log of failed syntheses
 
 **When to use:** To generate demo files for the Core Full ZIP package. The ZIP builder checks for ≥550 demo files and includes them if present.
-
----
-
-### gvappcorefullinstall.py — Core Full ZIP Builder
-
-Creates the `gvcore_v1.0.2_allvoices.zip` distribution package.
-
-**Location:** `py/gv/gvappcorefullinstall.py` (internal script)
-
-**What it does:**
-- Packages all 174 Piper voices (`.onnx` + `.onnx.json`)
-- Includes all application files (lib/, py/, tests/, doc/)
-- **Checks for demo files:** If ≥550 WAV files exist in `output/demo/`, includes them
-- Creates empty `output/` and `output/demo/` placeholders
-
-**When to use:** When preparing the Core Full distribution for users.
 
 ---
 

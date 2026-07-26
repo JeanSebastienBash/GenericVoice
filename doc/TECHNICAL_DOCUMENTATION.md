@@ -2,6 +2,8 @@
 
 This document provides comprehensive technical information for developers and advanced users.
 
+> **Status:** v1.0.2 is feature-complete (CLI + interactive menu + Flet GUI). No scheduled feature roadmap.
+
 ## Table of Contents
 
 1. [Architecture Overview](#architecture-overview)
@@ -263,20 +265,17 @@ These parameters must be used alone (no other parameters):
 `--auto-fix` calls `adapt.auto_install_dependencies(os_name)` to resolve missing system packages. It reads `--system-os` if provided, otherwise defaults to `ubuntu`.
 
 ```bash
-# Auto-detect OS
+# Auto-detect OS (non-root)
 python3 py/gv.py --auto-fix
 
 # Force OS target
 python3 py/gv.py --auto-fix --system-os ubuntu
 python3 py/gv.py --auto-fix --system-os debian
 python3 py/gv.py --auto-fix --system-os fedora
-
-# Elevated permissions (for system-level installs)
-sudo python3 py/gv.py --auto-fix
-sudo python3 py/gv.py --auto-fix --system-os ubuntu
 ```
 
 > `--auto-fix` is compatible with `--system-os` as the only exception to the solo-parameter rule.
+> Do not launch the entire application with `sudo`; install OS packages separately when required.
 
 ### Dependency Validation
 
@@ -464,7 +463,7 @@ Each test suite includes:
 
 ### Dependencies
 
-Core dependencies:
+Core dependencies (Python **3.10+** required by Flet 0.84):
 ```
 numpy>=1.20.0      # Audio processing
 scipy>=1.7.0       # Signal processing
@@ -473,6 +472,9 @@ edge-tts>=6.1.0    # Edge TTS engine
 flet==0.84.0       # GUI framework (desktop)
 flet-web==0.84.0   # GUI framework (web browser)
 ```
+
+Interactive menu synthesis builds an argv list (`Config.build_command()`), never a shell string.
+See also [THIRD_PARTY_NOTICES.md](../THIRD_PARTY_NOTICES.md) for redistributed binaries and GPLv3 eSpeak components.
 
 **Flet 0.84 Compatibility Notes:**
 - `ft.app()` → `ft.run()`
@@ -549,41 +551,13 @@ output/demo/
 
 ---
 
-### gvappcorefullinstall.py
-
-**Purpose:** Build the Core Full distribution ZIP.
-
-**Location:** `py/gv/gvappcorefullinstall.py` (internal script, gitignored)
-
-**Features:**
-- Packages all 174 Piper `.onnx` models
-- Includes complete application (lib/, py/, tests/, doc/)
-- **Demo inclusion:** Checks for ≥550 WAV files in `output/demo/`
-  - If threshold met: includes all demo files
-  - If not met: skips demos (empty `output/demo/` placeholder only)
-
-**Threshold Configuration:**
-```python
-MIN_DEMO_WAV_THRESHOLD = 550
-```
-
-**Exclusions:**
-- `py/gv/` directory (internal scripts)
-- `output/*` (except empty placeholders)
-- `*.zip.*` split archives
-- `gvvoicesinstallcore.py` (redundant in Full version)
-
-**Output:** `py/gv/apps/gvcore_v1.0.2_allvoices.zip`
-
----
-
 ## Version History
 
 | Version | Date | Changes |
 |---------|------|---------|
 | v1.0.0 | 2026-03 | Initial release |
 | v1.0.1 | 2026-04 | GitHub repo cleanup - EN docs, cleaned Python files |
-| v1.0.2 | 2026-04 | Documentation overhaul, specs, commercial landing |
+| v1.0.2 | 2026-04 | Documentation overhaul, Flet 0.84 GUI, feature-complete closure |
 
 ---
 

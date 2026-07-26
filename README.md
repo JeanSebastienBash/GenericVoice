@@ -1,172 +1,151 @@
 # Generic Voice
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
-[![Flet 0.84](https://img.shields.io/badge/flet-0.84-purple.svg)](https://flet.dev/)
-[![Linux](https://img.shields.io/badge/platform-linux-lightgrey.svg)]()
+<p align="center">
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"></a>
+  <a href="https://github.com/JeanSebastienBash/GenericVoice/tags"><img src="https://img.shields.io/badge/Version-1.0.2-blue.svg" alt="Version 1.0.2"></a>
+  <img src="https://img.shields.io/badge/python-3.10+-blue.svg" alt="Python 3.10+">
+  <img src="https://img.shields.io/badge/flet-0.84-purple.svg" alt="Flet 0.84">
+  <img src="https://img.shields.io/badge/platform-linux-lightgrey.svg" alt="Linux">
+</p>
 
-Text-to-speech synthesis tool providing unified access to multiple TTS engines with CLI and GUI interfaces.
+Generic Voice is a text-to-speech integrator for Linux. It unifies three engines behind one CLI, an interactive terminal menu, and an optional Flet GUI: **Piper** (offline neural), **Edge TTS** (online neural), and **eSpeak** (offline formant).
 
-## Overview
+**We integrate, we don't invent.** Each engine keeps its own strengths; Generic Voice provides one validated parameter surface, WAV export, optional Edge effects/melody stems, and playback helpers.
 
-Generic Voice is a text-to-speech synthesis platform with command-line and graphical interfaces. It supports three TTS engines:
-- **Piper**: Neural synthesis, offline operation, high quality (22kHz)
-- **Edge TTS**: Cloud-based neural synthesis, requires internet, excellent quality (48kHz)
-- **eSpeak**: Formant synthesis, offline operation, lightweight (22kHz)
-
-## Features
-
-- Multiple TTS engine support (Piper, Edge, eSpeak)
-- Audio effects and processing (echo, vibrato, reverb) - Edge TTS only
-- Melody and music generation - Edge TTS only
-- Multi-track export (stems separation)
-- **GUI Interface** (Flet 0.84) with full CLI parameter support
-- Interactive CLI mode
-- Cross-platform (Linux primary)
-
-## Quick Start
-
-```bash
-# Clone repository
-git clone https://github.com/JeanSebastienBash/GenericVoice.git
-cd GenericVoice
-
-# Create virtual environment
-python3 -m venv venv
-source venv/bin/activate
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Auto-install missing system dependencies (requires sudo)
-sudo python3 py/gv.py --auto-fix
-
-# With explicit OS target
-sudo python3 py/gv.py --auto-fix --system-os ubuntu
-sudo python3 py/gv.py --auto-fix --system-os debian
-
-# Install voice models (5 Core voices: FR, EN, DE, ES, IT)
-python3 py/gvcorevoices.py
-
-# Generate audio (CLI)
-python3 py/gv.py --tts piper --text "Hello world"
-
-# Launch GUI
-python3 py/gvflet.py
-
-# Launch GUI in web browser mode
-python3 py/gvflet.py --web --port 8555
-```
-
-## Usage
-
-```bash
-# List available engines
-python3 py/gv.py --list-engines
-
-# Simple synthesis
-python3 py/gv.py --tts piper --text "Hello world"
-
-# With specific voice
-python3 py/gv.py --tts piper --voice fr_FR-siwis-medium --text "Bonjour"
-
-# Using Edge TTS (online)
-python3 py/gv.py --tts edge --voice fr-FR-DeniseNeural --text "Bonjour"
-
-# With effects (Edge TTS only)
-python3 py/gv.py --tts edge --text "Hello" --voice-effect echo
-
-# With melody generation (Edge TTS only)
-python3 py/gv.py --tts edge --text "Welcome" --melody
-
-# Auto-play after generation
-python3 py/gv.py --tts piper --text "Hello" --auto-play --player cvlc
-```
-
-## Interactive Mode
-
-```bash
-python3 py/gv.py
-```
-
-## GUI Mode (Flet 0.84)
-
-The GUI provides a graphical interface with 6 tabs covering all CLI parameters:
-
-```bash
-# Desktop mode
-python3 py/gvflet.py
-
-# Web browser mode
-python3 py/gvflet.py --web --port 8555
-```
-
-**GUI Tabs:**
-1. **TTS Tab**: Engine selection, voice selection, text input
-2. **Audio Tab**: Duration, output file, WAV format, normalize, fades
-3. **Effects Tab**: Voice effects (echo, vibrato, reverb), melody mode
-4. **Playback Tab**: Auto-play, player selection, wait-finish
-5. **Advanced Tab**: System OS override, debugging options
-6. **Tools Tab**: Voice installation, demo generation, app packaging
-
-## System Requirements
-
-- Linux (Ubuntu/Debian recommended)
-- Python 3.8+
-- Flet 0.84+ (for GUI)
-- 500MB disk space (for voice models)
-- Internet connection (for Edge TTS and initial voice downloads)
-
-## Project Structure
-
-```
-GenericVoice/
-├── py/                        # Entry point scripts
-│   ├── gv.py                 # Main CLI
-│   ├── gvflet.py             # GUI interface (Flet 0.84)
-│   ├── gvcorevoices.py       # Core voices installer (5 languages)
-│   └── gvdemo.py             # Demo script
-├── lib/                      # Core libraries
-│   ├── tts/                  # TTS engine implementations
-│   │   ├── piper/           # Piper TTS
-│   │   ├── edge/            # Edge TTS
-│   │   └── espeak/          # eSpeak TTS
-│   ├── audio.py              # Audio processing
-│   ├── effects.py            # Voice effects
-│   └── ...
-├── tests/                    # Test suites
-├── output/                   # Generated audio files
-├── doc/                      # Documentation
-├── requirements.txt          # Python dependencies
-└── README.md                 # This file
-```
-
-## TTS Engines
-
-| Engine | Type | Quality | Latency | Voices | Offline |
-|--------|------|---------|---------|--------|---------|
-| Piper | Neural | High (22kHz) | Fast | Multiple | Yes |
-| Edge | Neural | Excellent (48kHz) | Medium | Multiple | No |
-| eSpeak | Formant | Robotic (22kHz) | Instant | Multiple | Yes |
-
-## Documentation
-
-- [User Guide](doc/USER_DOCUMENTATION.md) - Complete usage guide
-- [Technical Documentation](doc/TECHNICAL_DOCUMENTATION.md) - API and architecture
-
-## License
-
-Generic Voice Core: MIT License
-
-Third-party components:
-- Edge TTS: MIT License
-- Piper: MIT License
-- eSpeak: GPLv3 License
+<p align="center">
+  <a href="https://dreamproject.online/prj/genericvoice">Official project page</a> ·
+  <a href="SECURITY.md">Security</a> ·
+  <a href="CONTRIBUTING.md">Contributing</a> ·
+  <a href="doc/USER_DOCUMENTATION.md">User guide</a>
+</p>
 
 ---
 
-Made by [DreamprojectAI](https://dreamproject.online)
+## Project status
 
-[Website](https://dreamproject.online/prj/genericvoice) •
-[Documentation](doc/USER_DOCUMENTATION.md) •
-[Issues](https://github.com/JeanSebastienBash/GenericVoice/issues)
+> **Generic Voice 1.0.2 — feature-complete.** The MVP is finished and stable for its intended local Linux use (CLI-first, text-to-speech). There is no schedule of regular feature updates. Obvious bugs may still be fixed case by case. Further product context lives on the [official project page](https://dreamproject.online/prj/genericvoice).
+
+---
+
+## What it looks like
+
+<p align="center">
+  <table>
+    <tr>
+      <td valign="top" width="50%">
+        <img src="assets/images/readme/09-cli-piper-vlc-commercify.gif" alt="Complex Piper CLI command with French female voice synthesizing a Commercify promo then launching VLC playback" width="340" height="340" style="border:1px solid #d0d7de;border-radius:10px;display:block;">
+        <p align="center"><sub>CLI Piper · voix FR · multi-paramètres → WAV → VLC</sub></p>
+      </td>
+      <td valign="top" width="50%">
+        <img src="assets/images/readme/10-flet-web-gui.gif" alt="Flet web server started from the terminal then browser GUI on localhost with copyable command bar" width="340" height="340" style="border:1px solid #d0d7de;border-radius:10px;display:block;">
+        <p align="center"><sub>Flet web · localhost:port · options GUI → commande à copier</sub></p>
+      </td>
+    </tr>
+  </table>
+</p>
+
+---
+
+## Installation
+
+Requirements: **Linux** (Ubuntu/Debian recommended), **Python 3.10+**, disk space for Core Piper voices, and network only if you use Edge TTS.
+
+```bash
+git clone https://github.com/JeanSebastienBash/GenericVoice.git
+cd GenericVoice
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+python3 py/gvcorevoices.py
+python3 py/gv.py --list-engines
+```
+
+If system packages are missing, install them with your OS tools, then run dependency checks as a normal user:
+
+```bash
+python3 py/gv.py --auto-fix
+python3 py/gv.py --auto-fix --system-os ubuntu
+```
+
+Do **not** run the whole application under `sudo`.
+
+---
+
+## Quick usage
+
+```bash
+# Piper (offline)
+python3 py/gv.py --tts piper --voice fr_FR-siwis-medium --text "Hello world"
+
+# Edge (online — text leaves the machine)
+python3 py/gv.py --tts edge --voice fr-FR-DeniseNeural --text "Bonjour"
+
+# eSpeak (offline, lightweight)
+python3 py/gv.py --tts espeak --text "Quick test"
+
+# Edge effects / melody stems
+python3 py/gv.py --tts edge --text "Welcome" --voice-effect echo
+python3 py/gv.py --tts edge --text "Intro" --melody --duration 15
+
+# Interactive menu / GUI
+python3 py/gv.py
+python3 py/gvflet.py
+python3 py/gvflet.py --web --port 8555
+```
+
+Generated files land under `output/` as `YYYYMMDD_HHMMSS_<type>.wav` (or your `--output` basename with `_voice` / `_mix` suffixes).
+
+---
+
+## Engines
+
+| Engine | Connection | Typical rate | Notes |
+|--------|------------|--------------|-------|
+| Piper | Offline | 22 kHz | Core ships 5 voices (FR, EN, DE, ES, IT) |
+| Edge | Online | 48 kHz | Best quality; effects + melody; text is transmitted remotely |
+| eSpeak | Offline | 22 kHz | Fast formant fallback; many languages |
+
+---
+
+## Interfaces
+
+1. **CLI** — `py/gv.py` with validated parameters.
+2. **Interactive menu** — same process when launched without synthesis args.
+3. **GUI** — `py/gvflet.py` (Flet 0.84), six tabs mirroring the CLI.
+
+---
+
+## Documentation
+
+This README is the public entry point only (status, install, quick usage, engines). The full product surface is documented elsewhere:
+
+| Audience | Document | Covers |
+|----------|----------|--------|
+| End users | [User guide](doc/USER_DOCUMENTATION.md) | Installation, engines, CLI examples, GUI, outputs, troubleshooting |
+| Integrators / maintainers | [Technical documentation](doc/TECHNICAL_DOCUMENTATION.md) | Architecture, modules, parameter matrix, audio pipeline, tests, dependencies |
+
+Also: [Third-party notices](THIRD_PARTY_NOTICES.md) · [Security](SECURITY.md) · [Contributing](CONTRIBUTING.md)
+
+> **Need more than this README?** Start with the [user guide](doc/USER_DOCUMENTATION.md) for day-to-day usage (command reference, Flet GUI, Core voices). Open the [technical documentation](doc/TECHNICAL_DOCUMENTATION.md) for the CLI parameter matrix, synthesis pipeline, and module map. Nothing essential is “missing” here — it lives in those two guides on purpose.
+
+---
+
+## Risks and responsible use
+
+- Edge TTS is a cloud path: treat prompts as leaving the host.
+- `--auto-fix` may attempt package installs; prefer explicit OS package management and a non-root shell.
+- Bundled eSpeak NG components are GPLv3 — see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+- The repository includes Core voice ZIP archives and Piper runtime binaries; keep extracted `.onnx` files and `output/` audio out of accidental commits (already covered by `.gitignore`).
+- This line has automated unit/integration tests; GUI and live engine availability still depend on the local machine.
+
+---
+
+## License
+
+Generic Voice application code: [MIT](LICENSE).
+
+Third-party components retain their own licenses — see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+
+---
+
+Publisher: [DreamprojectAI](https://dreamproject.online/) · Project sheet: [genericvoice](https://dreamproject.online/prj/genericvoice)
