@@ -1,8 +1,8 @@
-# User Guide - Generic Voice v1.0.2
+# User Guide - Generic Voice v1.1
 
 Complete guide for using Generic Voice text-to-speech system.
 
-> **Status:** v1.0.2 is feature-complete. There is no public feature roadmap; fixes are reactive.
+> **Status:** v1.1 is feature-complete. There is no public feature roadmap; fixes are reactive.
 
 ## Table of Contents
 
@@ -510,5 +510,5 @@ The standard Core installation includes 5 Piper voices (FR, EN, DE, ES, IT).
 
 ---
 
-*Generic Voice v1.0.2 - User Guide*
+*Generic Voice v1.1 - User Guide*
 *DreamprojectAI - https://dreamproject.online/prj/genericvoice*

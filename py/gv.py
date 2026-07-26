@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Module: gv.py
-Purpose: Main CLI entry point and controller for Generic Voice v1.0.2.
+Purpose: Main CLI entry point and controller for Generic Voice v1.1.
     Provides command-line interface for TTS synthesis and interactive
     text-based menu system organized into tabs (TTS, Audio, Effects, Playback, Advanced).
 Context: Top-level launcher in py/. Imports and orchestrates lib/ modules
@@ -26,7 +26,7 @@ LIB_DIR = os.path.join(PROJECT_ROOT, "lib")
 sys.path.insert(0, LIB_DIR)
 sys.path.insert(0, PROJECT_ROOT)
 
-__version__ = "1.0.2"
+__version__ = "1.1"
 
 PIPER_VOICES_DIR = os.path.join(PROJECT_ROOT, "lib", "tts", "piper", "voices")
 PIPER_CORE_VOICES = [
@@ -91,7 +91,7 @@ try:
 except ImportError:
     def print_header():
         print("=" * 70)
-        print("  G E N E R I C   V O I C E  v1.0.2")
+        print("  G E N E R I C   V O I C E  v1.1")
         print("=" * 70)
     def print_footer():
         print("=" * 70)
@@ -466,7 +466,7 @@ def handle_tts_submenu(ihm):
             ("R", "Retour"),
         ]
         choice = ihm.menu(
-            title="Generic Voice v1.0.2 - TTS",
+            title="Generic Voice v1.1 - TTS",
             text=f"Command: {config.format_command()}",
             height=12, width=70, choice_height=4, items=items,
         )
@@ -521,7 +521,7 @@ def handle_audio_submenu(ihm):
             ("R", "Retour"),
         ]
         choice = ihm.menu(
-            title="Generic Voice v1.0.2 - Audio",
+            title="Generic Voice v1.1 - Audio",
             text=f"Command: {config.format_command()}",
             height=16, width=70, choice_height=7, items=items,
         )
@@ -575,7 +575,7 @@ def handle_effects_submenu(ihm):
             ("R", "Retour"),
         ]
         choice = ihm.menu(
-            title="Generic Voice v1.0.2 - Effects",
+            title="Generic Voice v1.1 - Effects",
             text=f"Command: {config.format_command()}",
             height=11, width=70, choice_height=3, items=items,
         )
@@ -614,7 +614,7 @@ def handle_playback_submenu(ihm):
             ("R", "Retour"),
         ]
         choice = ihm.menu(
-            title="Generic Voice v1.0.2 - Playback",
+            title="Generic Voice v1.1 - Playback",
             text=f"Command: {config.format_command()}",
             height=12, width=70, choice_height=4, items=items,
         )
@@ -647,7 +647,7 @@ def handle_advanced_submenu(ihm):
             ("R", "Retour"),
         ]
         choice = ihm.menu(
-            title="Generic Voice v1.0.2 - Advanced",
+            title="Generic Voice v1.1 - Advanced",
             text=f"Command: {config.format_command()}",
             height=10, width=70, choice_height=2, items=items,
         )
@@ -718,7 +718,7 @@ def handle_help(ihm):
     python3 gv.py --tts edge --text "Hi" --melody --voice-effect echo
     python3 gv.py --tts piper --text "Test" --auto-play --player cvlc
 """
-    ihm.msgbox("AIDE - Generic Voice v1.0.2", help_text, 35, 70)
+    ihm.msgbox("AIDE - Generic Voice v1.1", help_text, 35, 70)
 
 
 
@@ -738,7 +738,7 @@ def main_menu(ihm):
         ]
 
         choice = ihm.menu(
-            title="Generic Voice v1.0.2 - Menu Principal",
+            title="Generic Voice v1.1 - Menu Principal",
             text=f"Command: {config.format_command()}",
             height=20, width=78, choice_height=8, items=items,
         )

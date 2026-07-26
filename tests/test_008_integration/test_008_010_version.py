@@ -14,7 +14,7 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', '..'))
 
 def test_version():
     import gv
-    assert gv.__version__ == "1.0.2"
+    assert gv.__version__ == "1.1"
 
 if __name__ == '__main__':
     test_version()

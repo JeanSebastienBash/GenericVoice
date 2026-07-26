@@ -1,6 +1,6 @@
 # Contributing — Generic Voice
 
-Generic Voice **v1.0.2** is **feature-complete**. There is no public feature roadmap.
+Generic Voice **v1.1** is **feature-complete**. There is no public feature roadmap.
 
 | Channel | Use for |
 |---------|---------|

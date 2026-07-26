@@ -16,7 +16,7 @@ except ImportError:
     def print_header():
         print("=" * 70)
         print("  G E N E R I C   V O I C E")
-        print("  Menu Launcher v1.0.2")
+        print("  Menu Launcher v1.1")
         print("=" * 70)
         print()
 

@@ -2,7 +2,7 @@
 """
 Module: gvcorevoices.py
 Purpose: Installs the 5 Core Piper voice models from split ZIP archives. Extracts ONNX models for FR, EN, ES, IT, DE languages.
-Context: Entry point script in py/. Part of Generic Voice v1.0.2 TTS suite.
+Context: Entry point script in py/. Part of Generic Voice v1.1 TTS suite.
 Impact: Direct user-facing tool. Changes affect user workflow and voice installation.
 Related: lib/tts/piper/voices/
 """

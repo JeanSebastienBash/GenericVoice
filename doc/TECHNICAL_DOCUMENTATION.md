@@ -1,8 +1,8 @@
-# Technical Documentation - Generic Voice v1.0.2
+# Technical Documentation - Generic Voice v1.1
 
 This document provides comprehensive technical information for developers and advanced users.
 
-> **Status:** v1.0.2 is feature-complete (CLI + interactive menu + Flet GUI). No scheduled feature roadmap.
+> **Status:** v1.1 is feature-complete (CLI + interactive menu + Flet GUI). No scheduled feature roadmap.
 
 ## Table of Contents
 
@@ -557,6 +557,7 @@ output/demo/
 |---------|------|---------|
 | v1.0.0 | 2026-03 | Initial release |
 | v1.0.1 | 2026-04 | GitHub repo cleanup - EN docs, cleaned Python files |
+| v1.1 | 2026-07 | Public closure push-ready: CLI harden, docs, CI, README GIFs |
 | v1.0.2 | 2026-04 | Documentation overhaul, Flet 0.84 GUI, feature-complete closure |
 
 ---
@@ -572,4 +573,4 @@ Third-party components:
 
 ---
 
-*Generic Voice v1.0.2 - Technical Documentation*
+*Generic Voice v1.1 - Technical Documentation*

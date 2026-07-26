@@ -114,7 +114,7 @@ def run_suite(suite_name, verbose=False):
 
 def main():
     import argparse
-    parser = argparse.ArgumentParser(description='Generic Voice v1.0.2 Test Runner')
+    parser = argparse.ArgumentParser(description='Generic Voice v1.1 Test Runner')
     parser.add_argument('-v', '--verbose', action='store_true', help='Verbose mode')
     parser.add_argument('--suite', type=str, default=None, help='Run specific suite')
     args = parser.parse_args()
@@ -130,7 +130,7 @@ def main():
     total_tests = sum(s[3] for s in suites_to_run)
 
     print(f"{'='*60}")
-    print(f"GENERIC VOICE v1.0.2 - TEST SUITE")
+    print(f"GENERIC VOICE v1.1 - TEST SUITE")
     print(f"{'='*60}")
     print(f"Total: {total_tests} unit tests in {len(suites_to_run)} suites")
     print(f"Mode: {'VERBOSE' if args.verbose else 'NORMAL'}")

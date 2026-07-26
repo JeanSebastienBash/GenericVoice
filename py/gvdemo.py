@@ -2,7 +2,7 @@
 """
 Module: gvdemo.py
 Purpose: Generates sample audio files for all supported voices.
-Context: Entry point script in py/. Part of Generic Voice v1.0.2 TTS suite.
+Context: Entry point script in py/. Part of Generic Voice v1.1 TTS suite.
 Impact: Direct user-facing tool.
 Related: lib/tts/*/voices/voices.json, py/gv.py
 """

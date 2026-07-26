@@ -10,7 +10,7 @@ Related: py/gv.py, py/gvflet.py
 import sys
 import os
 
-__version__ = "1.0.2"
+__version__ = "1.1"
 
 def _separator(width: int = 70) -> str:
     

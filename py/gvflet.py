@@ -2,7 +2,7 @@
 """
 Module: gvflet.py
 Purpose: Provides graphical interface mirroring CLI functionality. Organized into tabs for TTS, Audio, Effects, Playback, and Advanced settings.
-Context: Entry point script in py/. Part of Generic Voice v1.0.2 TTS suite.
+Context: Entry point script in py/. Part of Generic Voice v1.1 TTS suite.
 Impact: Direct user-facing tool. Changes affect user workflow and voice installation.
 Related: lib/config.py, lib/synthesis.py, lib/player.py, lib/param_validator.py, py/gv.py
 """
@@ -221,7 +221,7 @@ def main(page: ft.Page):
     print("=" * 60)
     
     print("[LOG] Setting page properties...")
-    page.title = "Generic Voice v1.0.2"
+    page.title = "Generic Voice v1.1"
     print("[LOG] page.title set")
     
     page.window.width = 1000
@@ -666,7 +666,7 @@ def main(page: ft.Page):
         controls=[
             tab_bar,
             ft.Container(
-                content=ft.Text("🎤 Generic Voice v1.0.2 - TTS Synthesis", size=24, weight=ft.FontWeight.BOLD, color=PRIMARY),
+                content=ft.Text("🎤 Generic Voice v1.1 - TTS Synthesis", size=24, weight=ft.FontWeight.BOLD, color=PRIMARY),
                 padding=10,
             ),
             tab_bar_view,

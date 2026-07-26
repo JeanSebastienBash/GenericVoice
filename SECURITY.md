@@ -10,7 +10,7 @@ privilege-escalation flaws.
 
 ## Supported line
 
-Only **v1.0.2** is supported. There is no regular hardening roadmap. Fixes are
+Only **v1.1** is supported. There is no regular hardening roadmap. Fixes are
 considered case by case.
 
 ## Operator expectations
@@ -27,6 +27,6 @@ considered case by case.
 
 ## Project status
 
-Generic Voice **v1.0.2** is **feature-complete**. Maintenance is reactive and
+Generic Voice **v1.1** is **feature-complete**. Maintenance is reactive and
 best-effort. See the [README](README.md#project-status) and the
 [official project page](https://dreamproject.online/prj/genericvoice).

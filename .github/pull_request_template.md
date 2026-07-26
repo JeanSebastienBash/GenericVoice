@@ -9,7 +9,7 @@
 - [ ] Test coverage
 - [ ] Packaging / licenses
 
-> Generic Voice v1.0.2 is feature-complete. New product features are out of scope unless the maintainer asks for them.
+> Generic Voice v1.1 is feature-complete. New product features are out of scope unless the maintainer asks for them.
 
 ## Checks
 

@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"></a>
-  <a href="https://github.com/JeanSebastienBash/GenericVoice/tags"><img src="https://img.shields.io/badge/Version-1.0.2-blue.svg" alt="Version 1.0.2"></a>
+  <a href="https://github.com/JeanSebastienBash/GenericVoice/tags"><img src="https://img.shields.io/badge/Version-1.1-blue.svg" alt="Version 1.1"></a>
   <img src="https://img.shields.io/badge/python-3.10+-blue.svg" alt="Python 3.10+">
   <img src="https://img.shields.io/badge/flet-0.84-purple.svg" alt="Flet 0.84">
   <img src="https://img.shields.io/badge/platform-linux-lightgrey.svg" alt="Linux">
@@ -23,7 +23,7 @@ Generic Voice is a text-to-speech integrator for Linux. It unifies three engines
 
 ## Project status
 
-> **Generic Voice 1.0.2 — feature-complete.** The MVP is finished and stable for its intended local Linux use (CLI-first, text-to-speech). There is no schedule of regular feature updates. Obvious bugs may still be fixed case by case. Further product context lives on the [official project page](https://dreamproject.online/prj/genericvoice).
+> **Generic Voice 1.1 — feature-complete.** The MVP is finished and stable for its intended local Linux use (CLI-first, text-to-speech). There is no schedule of regular feature updates. Obvious bugs may still be fixed case by case. Further product context lives on the [official project page](https://dreamproject.online/prj/genericvoice).
 
 ---
 
