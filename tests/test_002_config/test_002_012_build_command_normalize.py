@@ -33,7 +33,7 @@ def test_build_command_normalize_with_tts():
     c.audio.normalize = True
     cmd = c.build_command()
     assert '--normalize' in cmd
-    assert '--tts piper' in cmd
+    assert cmd[cmd.index('--tts') + 1] == 'piper'
 
 if __name__ == '__main__':
     test_build_command_normalize()

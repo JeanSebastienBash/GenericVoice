@@ -96,7 +96,7 @@ def get_player_description(player_id: str) -> str:
     
     return AVAILABLE_PLAYERS.get(player_id, {}).get("name", player_id)
 
-def play(audio_file, player_id=None, os_name=None):
+def play(audio_file, player_id=None, os_name=None, wait_finish=False):
     
     if not os.path.exists(audio_file):
         print_warning("Unknown Player", 
@@ -132,46 +132,31 @@ def play(audio_file, player_id=None, os_name=None):
                 "Aucun player audio n'est installe sur ce systeme.",
                 details=[
                     "Installez un player: vlc, ffplay, parole, aplay...",
-                    "Ou lancez: python3 gv.py --auto-fix"
+                    "Ou lancez: python3 py/gv.py --auto-fix"
                 ],
                 hint="Installez VLC ou FFplay pour ecouter l'audio"
             )
         return False
     
     cmd = AVAILABLE_PLAYERS[player_id]["cmd"]
-    
+    if player_id in ["vlc", "cvlc"]:
+        argv = [cmd, "--play-and-exit", audio_file] if wait_finish else [cmd, "--play-and-pause", audio_file]
+    elif player_id == "ffplay":
+        argv = [cmd, "-nodisp", "-autoexit", audio_file]
+    else:
+        argv = [cmd, audio_file]
+
     try:
-        if player_id in ["vlc", "cvlc"]:
-            subprocess.Popen(
-                [cmd, "--play-and-pause", audio_file],
+        if wait_finish:
+            subprocess.run(
+                argv,
                 stdout=subprocess.DEVNULL,
                 stderr=subprocess.DEVNULL,
-                start_new_session=True
-            )
-        elif player_id == "parole":
-            subprocess.Popen(
-                [cmd, audio_file],
-                stdout=subprocess.DEVNULL,
-                stderr=subprocess.DEVNULL,
-                start_new_session=True
-            )
-        elif player_id == "ffplay":
-            subprocess.Popen(
-                [cmd, "-nodisp", "-autoexit", audio_file],
-                stdout=subprocess.DEVNULL,
-                stderr=subprocess.DEVNULL,
-                start_new_session=True
-            )
-        elif player_id == "aplay":
-            subprocess.Popen(
-                [cmd, audio_file],
-                stdout=subprocess.DEVNULL,
-                stderr=subprocess.DEVNULL,
-                start_new_session=True
+                check=False,
             )
         else:
             subprocess.Popen(
-                [cmd, audio_file],
+                argv,
                 stdout=subprocess.DEVNULL,
                 stderr=subprocess.DEVNULL,
                 start_new_session=True

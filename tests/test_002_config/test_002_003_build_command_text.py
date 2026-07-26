@@ -17,6 +17,19 @@ def test_build_command_text():
     c = Config()
     c.text = 'Hello World'
     cmd = c.build_command()
-    assert '--text "Hello World"' in cmd
+    assert cmd[cmd.index('--text') + 1] == 'Hello World'
+
+def test_build_command_text_metacharacters_safe():
+    c = Config()
+    c.text = 'Hello"; rm -rf / #'
+    cmd = c.build_command()
+    assert isinstance(cmd, list)
+    assert cmd[cmd.index('--text') + 1] == 'Hello"; rm -rf / #'
+    # No shell concatenation: text is a single argv element
+    joined = ' '.join(cmd)
+    assert 'rm -rf' in joined
+    assert cmd.count('--text') == 1
+
 if __name__ == '__main__':
     test_build_command_text()
+    test_build_command_text_metacharacters_safe()

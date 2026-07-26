@@ -34,7 +34,7 @@ def test_build_command_melody_with_tts():
     c.melody_toggle = True
     cmd = c.build_command()
     assert '--melody' in cmd
-    assert '--tts piper' in cmd
+    assert cmd[cmd.index('--tts') + 1] == 'piper'
 
 if __name__ == '__main__':
     test_build_command_melody()

@@ -110,6 +110,12 @@ class TestSoloParamsAutoFix:
         errors = validate_solo_params({'auto_fix': True, 'text': 'hello'})
         assert len(errors) == 1, f"Expected 1 error, got {len(errors)}"
 
+    @suppress_output
+    def test_auto_fix_with_system_os_valid(self):
+        
+        errors = validate_solo_params({'auto_fix': True, 'system_os': 'ubuntu'})
+        assert len(errors) == 0, f"Expected 0 errors for --auto-fix --system-os, got {len(errors)}"
+
 class TestSoloParamsLauncher:
     
     @suppress_output

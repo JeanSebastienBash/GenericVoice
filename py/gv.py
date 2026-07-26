@@ -186,9 +186,9 @@ def print_piper_installation_error():
     print()
     if has_zip_archives():
         print("  Archives ZIP presentes. Executez:")
-        print("    python3 gvzipvoicesinstallcore.py")
+        print("    python3 py/gvcorevoices.py")
     else:
-        print("  Executez: python3 gvzipvoicesinstallcore.py")
+        print("  Executez: python3 py/gvcorevoices.py")
     print()
     print_footer()
 
@@ -300,7 +300,7 @@ def run_auto_fix():
             print("  Installation terminee.")
         except Exception as e:
             print(f"  Erreur: {e}")
-            print("  Essayez: sudo python3 gv.py --auto-fix")
+            print("  Si des paquets systeme manquent, installez-les avec votre gestionnaire (apt/dnf),\n  puis relancez: python3 py/gv.py --auto-fix")
     else:
         print("  Module adapt non disponible.")
     print()
@@ -467,7 +467,7 @@ def handle_tts_submenu(ihm):
         ]
         choice = ihm.menu(
             title="Generic Voice v1.0.2 - TTS",
-            text=f"Command: {config.build_command()}",
+            text=f"Command: {config.format_command()}",
             height=12, width=70, choice_height=4, items=items,
         )
         if choice is None or choice == "R":
@@ -522,7 +522,7 @@ def handle_audio_submenu(ihm):
         ]
         choice = ihm.menu(
             title="Generic Voice v1.0.2 - Audio",
-            text=f"Command: {config.build_command()}",
+            text=f"Command: {config.format_command()}",
             height=16, width=70, choice_height=7, items=items,
         )
         if choice is None or choice == "R":
@@ -576,7 +576,7 @@ def handle_effects_submenu(ihm):
         ]
         choice = ihm.menu(
             title="Generic Voice v1.0.2 - Effects",
-            text=f"Command: {config.build_command()}",
+            text=f"Command: {config.format_command()}",
             height=11, width=70, choice_height=3, items=items,
         )
         if choice is None or choice == "R":
@@ -615,7 +615,7 @@ def handle_playback_submenu(ihm):
         ]
         choice = ihm.menu(
             title="Generic Voice v1.0.2 - Playback",
-            text=f"Command: {config.build_command()}",
+            text=f"Command: {config.format_command()}",
             height=12, width=70, choice_height=4, items=items,
         )
         if choice is None or choice == "R":
@@ -648,7 +648,7 @@ def handle_advanced_submenu(ihm):
         ]
         choice = ihm.menu(
             title="Generic Voice v1.0.2 - Advanced",
-            text=f"Command: {config.build_command()}",
+            text=f"Command: {config.format_command()}",
             height=10, width=70, choice_height=2, items=items,
         )
         if choice is None or choice == "R":
@@ -669,14 +669,16 @@ def handle_advanced_submenu(ihm):
 
 def handle_execute(ihm):
     cmd = config.build_command()
+    display = config.format_command()
     if not config.text:
         ihm.msgbox("Erreur", "Aucun texte.\nUtilisez [T] > [3] pour saisir le texte.", 8, 50)
         return
-    if ihm.yesno("Confirmer", f"Executer la synthese ?\n\n{cmd}", 13, 65):
-        print(f"\nExecution: {cmd}")
+    if ihm.yesno("Confirmer", f"Executer la synthese ?\n\n{display}", 13, 65):
+        print(f"\nExecution: {display}")
         try:
             import subprocess
-            result = subprocess.run(cmd, shell=True, text=True)
+            # argv list — never shell=True (prevents injection via text/voice/output)
+            result = subprocess.run(cmd, text=True, cwd=PROJECT_ROOT)
             msg = "Synthese terminee." if result.returncode == 0 else f"Erreur (code {result.returncode})."
             input(f"\n{msg} Appuyez sur Entree...")
         except Exception as e:
@@ -737,7 +739,7 @@ def main_menu(ihm):
 
         choice = ihm.menu(
             title="Generic Voice v1.0.2 - Menu Principal",
-            text=f"Command: {config.build_command()}",
+            text=f"Command: {config.format_command()}",
             height=20, width=78, choice_height=8, items=items,
         )
 
@@ -820,6 +822,12 @@ def main():
         try:
             print(f"Synthese [{opts['tts']}]: {opts['text']}")
             voice_effect_name = config.voice_effect_name if config.voice_toggle else None
+            target_duration = None
+            if config.duration and config.duration != "auto":
+                try:
+                    target_duration = float(config.duration)
+                except (TypeError, ValueError):
+                    target_duration = None
             paths = synthesis.synthesize_complete(
                 tts_engine=engine,
                 text=opts["text"],
@@ -861,6 +869,8 @@ def main():
                 normalize=config.audio.normalize,
                 fade_in_ms=config.audio.fade_in_ms,
                 fade_out_ms=config.audio.fade_out_ms,
+                target_duration=target_duration,
+                wav_format=config.audio.wav_format,
             )
             for key, path in paths.items():
                 print(f"  {key}: {path}")
@@ -869,7 +879,12 @@ def main():
                 player_name = opts.get("player") or player.get_default_player()
                 if player_name and player.is_player_available(player_name):
                     print(f"Lecture avec {player_name}...")
-                    player.play(paths.get("mix", ""), player_name)
+                    wait_finish = bool(opts.get("wait_finish") or config.audio.wait_finish)
+                    player.play(
+                        paths.get("mix") or paths.get("voice", ""),
+                        player_name,
+                        wait_finish=wait_finish,
+                    )
 
         except Exception as e:
             print(f"Erreur synthese: {e}"); sys.exit(1)

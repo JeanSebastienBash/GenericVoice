@@ -8,8 +8,9 @@ Related: lib/param_validator.py, lib/player.py, lib/synthesis.py
 
 
 import os
+import shlex
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import List, Optional, Union
 import player as player_lib
 
 DEFAULT_TTS = "piper"
@@ -214,49 +215,55 @@ class Config:
             "blocked": self.is_blocked(),
         }
     
-    def build_command(self) -> str:
-        cmd = f"python3 gv.py --mode {self.mode} --tts {self.tts}"
-        
-        if self.voice_toggle:
-            cmd += " --voice-effect"
-            if self.voice_effect_name:
-                cmd += f" {self.voice_effect_name}"
-        
+    def build_command(self) -> List[str]:
+        """Build argv for synthesis. Never interpolate user text into a shell string."""
+        cmd: List[str] = ["python3", "py/gv.py", "--tts", self.tts or DEFAULT_TTS]
+
+        if self.voice_toggle and self.voice_effect_name:
+            cmd.extend(["--voice-effect", self.voice_effect_name])
+
         if self.melody_toggle:
-            cmd += " --melody"
-        
+            cmd.append("--melody")
+
         if self.text:
-            cmd += f' --text "{self.text}"'
-        
+            cmd.extend(["--text", self.text])
+
         if self.voice:
-            cmd += f" --voice {self.voice}"
-        
+            cmd.extend(["--voice", self.voice])
+
         if self.duration and self.duration != "auto":
-            cmd += f" --duration {self.duration}"
-        
+            cmd.extend(["--duration", str(self.duration)])
+
         if self.output:
-            cmd += f" --output {self.output}"
-        
+            cmd.extend(["--output", self.output])
+
         if self.auto_play:
-            cmd += " --auto-play"
+            cmd.append("--auto-play")
             if self.player:
-                cmd += f" --player {self.player}"
-        
+                cmd.extend(["--player", self.player])
+
         if self.audio.wav_format and self.audio.wav_format != "16-bit":
-            cmd += f" --wav-format {self.audio.wav_format}"
-        
+            cmd.extend(["--wav-format", self.audio.wav_format])
+
         if self.audio.normalize:
-            cmd += " --normalize"
-        
+            cmd.append("--normalize")
+
         if self.auto_play and self.audio.wait_finish:
-            cmd += " --wait-finish"
-        
+            cmd.append("--wait-finish")
+
         if self.audio.fade_in_ms != 50:
-            cmd += f" --fade-in {self.audio.fade_in_ms}"
-        
+            cmd.extend(["--fade-in", str(self.audio.fade_in_ms)])
+
         if self.audio.fade_out_ms != 80:
-            cmd += f" --fade-out {self.audio.fade_out_ms}"
-        
+            cmd.extend(["--fade-out", str(self.audio.fade_out_ms)])
+
+        if self.system_os and self.system_os not in ("", "auto", DEFAULT_SYSTEM_OS):
+            cmd.extend(["--system-os", self.system_os])
+
         return cmd
+
+    def format_command(self) -> str:
+        """Safe human-readable command for menus (shell-escaped, not executed as shell)."""
+        return shlex.join(self.build_command())
 
 config = Config()

@@ -17,6 +17,6 @@ def test_build_command_duration():
     c = Config()
     c.duration = '5'
     cmd = c.build_command()
-    assert '--duration 5' in cmd
+    assert cmd[cmd.index('--duration') + 1] == '5'
 if __name__ == '__main__':
     test_build_command_duration()

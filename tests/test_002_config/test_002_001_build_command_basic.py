@@ -14,44 +14,41 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', '..', 'lib'))
 from config import Config
 
 def test_build_command_basic():
-    
     c = Config()
     c.tts = 'espeak'
     c.mode = 'generate'
     cmd = c.build_command()
-    assert '--tts espeak' in cmd
+    assert isinstance(cmd, list)
+    assert cmd[cmd.index('--tts') + 1] == 'espeak'
 
 def test_build_command_default_tts():
-    
     c = Config()
     cmd = c.build_command()
-    assert '--tts piper' in cmd
+    assert cmd[cmd.index('--tts') + 1] == 'piper'
 
 def test_build_command_contains_python():
-    
     c = Config()
     cmd = c.build_command()
-    assert 'python3 gv.py' in cmd
+    assert cmd[0] == 'python3'
+    assert 'gv.py' in cmd[1]
 
 def test_build_command_empty_config():
-    
     c = Config()
     cmd = c.build_command()
-    assert 'python3 gv.py --mode' in cmd and '--tts' in cmd
+    assert '--mode' not in cmd
+    assert '--tts' in cmd
 
 def test_build_command_tts_edge():
-    
     c = Config()
     c.tts = 'edge'
     cmd = c.build_command()
-    assert '--tts edge' in cmd
+    assert cmd[cmd.index('--tts') + 1] == 'edge'
 
 def test_build_command_format():
-    
     c = Config()
     c.tts = 'piper'
     cmd = c.build_command()
-    assert 'python3 gv.py' in cmd
+    assert cmd[0] == 'python3'
     assert '--tts' in cmd
 
 if __name__ == '__main__':

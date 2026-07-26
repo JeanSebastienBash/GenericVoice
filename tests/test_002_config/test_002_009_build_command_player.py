@@ -18,6 +18,6 @@ def test_build_command_player():
     c.auto_play = True
     c.player = 'cvlc'
     cmd = c.build_command()
-    assert '--player cvlc' in cmd
+    assert cmd[cmd.index('--player') + 1] == 'cvlc'
 if __name__ == '__main__':
     test_build_command_player()

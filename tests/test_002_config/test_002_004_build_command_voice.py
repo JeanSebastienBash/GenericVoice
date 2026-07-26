@@ -17,6 +17,6 @@ def test_build_command_voice():
     c = Config()
     c.voice = 'fr'
     cmd = c.build_command()
-    assert '--voice fr' in cmd
+    assert cmd[cmd.index('--voice') + 1] == 'fr'
 if __name__ == '__main__':
     test_build_command_voice()

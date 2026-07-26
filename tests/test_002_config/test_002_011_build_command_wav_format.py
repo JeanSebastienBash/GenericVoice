@@ -18,7 +18,7 @@ def test_build_command_wav_format():
     c = Config()
     c.audio.wav_format = "32-bit"
     cmd = c.build_command()
-    assert '--wav-format 32-bit' in cmd
+    assert cmd[cmd.index('--wav-format') + 1] == '32-bit'
 
 def test_build_command_wav_format_16bit():
     
@@ -32,8 +32,8 @@ def test_build_command_wav_format_with_tts():
     c.tts = 'piper'
     c.audio.wav_format = "32-bit"
     cmd = c.build_command()
-    assert '--wav-format 32-bit' in cmd
-    assert '--tts piper' in cmd
+    assert cmd[cmd.index('--wav-format') + 1] == '32-bit'
+    assert cmd[cmd.index('--tts') + 1] == 'piper'
 
 if __name__ == '__main__':
     test_build_command_wav_format()

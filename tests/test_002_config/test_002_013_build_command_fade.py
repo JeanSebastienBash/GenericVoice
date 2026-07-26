@@ -18,14 +18,14 @@ def test_build_command_fade_in():
     c = Config()
     c.audio.fade_in_ms = 100
     cmd = c.build_command()
-    assert '--fade-in 100' in cmd
+    assert cmd[cmd.index('--fade-in') + 1] == '100'
 
 def test_build_command_fade_out():
     
     c = Config()
     c.audio.fade_out_ms = 150
     cmd = c.build_command()
-    assert '--fade-out 150' in cmd
+    assert cmd[cmd.index('--fade-out') + 1] == '150'
 
 def test_build_command_fade_both():
     
@@ -33,8 +33,8 @@ def test_build_command_fade_both():
     c.audio.fade_in_ms = 75
     c.audio.fade_out_ms = 120
     cmd = c.build_command()
-    assert '--fade-in 75' in cmd
-    assert '--fade-out 120' in cmd
+    assert cmd[cmd.index('--fade-in') + 1] == '75'
+    assert cmd[cmd.index('--fade-out') + 1] == '120'
 
 def test_build_command_fade_default():
     

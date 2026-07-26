@@ -200,6 +200,9 @@ def validate_solo_params(parsed: Dict) -> List[Dict]:
             other_params = []
             for k, v in parsed.items():
                 if k != key and v:
+                    # Exception: --auto-fix may be paired with --system-os only.
+                    if solo_param == "auto-fix" and k == "system_os":
+                        continue
                     if k in VALUE_OPTIONS and v:
                         other_params.append(f"--{k.replace('_', '-')}")
                     elif k in [f.replace("-", "_") for f in FLAG_OPTIONS] and v:
@@ -213,6 +216,7 @@ def validate_solo_params(parsed: Dict) -> List[Dict]:
                         "explanation": [
                             f"L'option --{solo_param} est une commande autonome.",
                             "Elle doit etre utilisee seule, sans autres parametres.",
+                            "Exception: --auto-fix accepte uniquement --system-os.",
                         ],
                         "params_found": other_params,
                         "solo_param": solo_param,

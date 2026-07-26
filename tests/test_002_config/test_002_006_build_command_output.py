@@ -17,6 +17,6 @@ def test_build_command_output():
     c = Config()
     c.output = 'test.wav'
     cmd = c.build_command()
-    assert '--output test.wav' in cmd
+    assert cmd[cmd.index('--output') + 1] == 'test.wav'
 if __name__ == '__main__':
     test_build_command_output()

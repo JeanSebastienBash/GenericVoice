@@ -18,6 +18,7 @@ def test_build_command_voice_effect():
     c.voice_toggle = True
     c.voice_effect_name = 'echo'
     cmd = c.build_command()
-    assert '--voice-effect echo' in cmd
+    assert cmd[cmd.index('--voice-effect') + 1] == 'echo'
+
 if __name__ == '__main__':
     test_build_command_voice_effect()

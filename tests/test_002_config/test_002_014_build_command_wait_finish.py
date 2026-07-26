@@ -43,7 +43,7 @@ def test_build_command_wait_finish_with_player():
     c.audio.wait_finish = True
     cmd = c.build_command()
     assert '--wait-finish' in cmd
-    assert '--player cvlc' in cmd
+    assert cmd[cmd.index('--player') + 1] == 'cvlc'
 
 if __name__ == '__main__':
     test_build_command_wait_finish()

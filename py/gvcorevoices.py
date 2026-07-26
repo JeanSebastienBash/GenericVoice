@@ -118,6 +118,11 @@ def main():
     print("     GENERIC VOICE - Installation des voix Piper Core")
     print("=" * 70)
     print()
+
+    cleanup = "--cleanup" in sys.argv
+    if cleanup:
+        print("Mode --cleanup: les archives ZIP seront supprimees apres extraction.")
+        print()
     
     if not PIPER_VOICES_DIR.exists():
         print(f"ERREUR: Repertoire introuvable: {PIPER_VOICES_DIR}")
@@ -142,12 +147,16 @@ def main():
     print("=" * 70)
     
     if installed == len(CORE_VOICES):
-        cleanup_archives()
+        if cleanup:
+            cleanup_archives()
+        else:
+            print()
+            print("Archives ZIP conservees (defaut). Utilisez --cleanup pour les supprimer.")
         print()
         print("Installation terminee avec succes!")
         print()
         print("Vous pouvez maintenant utiliser Generic Voice:")
-        print("  python3 gv.py --tts piper --text \"Bonjour\"")
+        print("  python3 py/gv.py --tts piper --text \"Bonjour\"")
         sys.exit(0)
     else:
         print()

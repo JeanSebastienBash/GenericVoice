@@ -75,14 +75,13 @@ GUM_INSTALL_COMMANDS: Dict[str, List[List[str]]] = {
 }
 
 def check_command_exists(command: str) -> bool:
-    
     try:
-        subprocess.run(
+        result = subprocess.run(
             ["which", command],
             capture_output=True,
             check=False,
         )
-        return True
+        return result.returncode == 0
     except FileNotFoundError:
         return False
 

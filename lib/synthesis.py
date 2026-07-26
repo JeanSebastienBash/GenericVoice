@@ -30,6 +30,13 @@ def resample_audio(data, orig_sr, target_sr):
     
     return sp_signal.resample_poly(data, up, down).astype(np.float32)
 
+def _save_wav(path, data, sample_rate, wav_format="16-bit"):
+    if wav_format == "32-bit":
+        audio.save_wav_32bit(path, data, sample_rate)
+    else:
+        audio.save_wav_16bit(path, data, sample_rate)
+
+
 def synthesize_complete(
     tts_engine,
     text: str,
@@ -46,6 +53,8 @@ def synthesize_complete(
     normalize: bool = False,
     fade_in_ms: int = 50,
     fade_out_ms: int = 80,
+    target_duration: float = None,
+    wav_format: str = "16-bit",
 ):
     
     os.makedirs(output_dir, exist_ok=True)
@@ -102,7 +111,22 @@ def synthesize_complete(
         voice_data = voice_data / np.max(np.abs(voice_data)) * 0.9
     
     duration = len(voice_data) / SAMPLE_RATE
-    
+    if target_duration is not None:
+        try:
+            target_duration = float(target_duration)
+        except (TypeError, ValueError):
+            target_duration = None
+    if target_duration and target_duration > duration:
+        pad_len = int(SAMPLE_RATE * target_duration) - len(voice_data)
+        if pad_len > 0:
+            voice_data = np.pad(voice_data, (0, pad_len))
+            duration = target_duration
+    elif target_duration and target_duration > 0 and target_duration < duration:
+        # Truncate only when melody is requested to match a shorter bed length.
+        if melody_enabled:
+            voice_data = voice_data[: int(SAMPLE_RATE * target_duration)]
+            duration = target_duration
+
     if voice_effect and voice_effect != "none":
         voice_data = effects.apply_voice_effect(
             voice_data,
@@ -189,14 +213,14 @@ def synthesize_complete(
     paths = {}
     
     mix_path = os.path.join(output_dir, f"{base_name}_mix.wav")
-    audio.save_wav_16bit(mix_path, mix, SAMPLE_RATE)
+    _save_wav(mix_path, mix, SAMPLE_RATE, wav_format)
     paths["mix"] = mix_path
     
     for stem_name, stem_data in stems.items():
         if normalize:
             stem_data = audio.normalize(stem_data)
         stem_path = os.path.join(output_dir, f"{base_name}_{stem_name}.wav")
-        audio.save_wav_16bit(stem_path, stem_data, SAMPLE_RATE)
+        _save_wav(stem_path, stem_data, SAMPLE_RATE, wav_format)
         paths[stem_name] = stem_path
     
     try:
