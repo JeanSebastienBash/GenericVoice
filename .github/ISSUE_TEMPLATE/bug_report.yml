@@ -1,0 +1,59 @@
+name: Bug
+description: Incorrect behaviour or regression in Generic Voice
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Include OS, Python version, and the exact command (or GUI steps).
+        Security vulnerabilities → email **dreamproject-ai@proton.me** (see SECURITY.md), not this form.
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: "1. python3 py/gv.py … 2. Observe…"
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behaviour
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Observed behaviour
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      placeholder: "1.0.2"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: engine
+    attributes:
+      label: TTS engine involved
+      options:
+        - piper
+        - edge
+        - espeak
+        - gui / menu only
+        - unknown / none
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs (optional)
+      render: shell
